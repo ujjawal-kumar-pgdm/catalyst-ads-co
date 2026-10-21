@@ -1,562 +1,83 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth dark">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Catalyst Ads Co. — Marketing That Moves Businesses Forward</title>
-  <meta name="description" content="Strategic digital growth partner specializing in SEO, Google Ads, Meta Ads, Lead Generation, and Performance Marketing.">
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  
-  <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@latest"></script>
-
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              black: '#0B0C0E',
-              dark: '#121418',
-              card: '#181B20',
-              border: '#262A33',
-              gold: '#D4AF37',
-              goldHover: '#B89628',
-              goldLight: '#F3E5AB'
-            }
-          },
-          fontFamily: {
-            sans: ['Plus Jakarta Sans', 'sans-serif']
-          }
-        }
-      }
-    }
-  </script>
-
-  <style>
-    body {
-      background-color: #0B0C0E;
-      color: #E5E7EB;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      overflow-x: hidden;
-    }
-    .gold-gradient-text {
-      background: linear-gradient(135deg, #F3E5AB 0%, #D4AF37 50%, #AA820A 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    .gold-gradient-bg {
-      background: linear-gradient(135deg, #D4AF37 0%, #AA820A 100%);
-    }
-    .glass-card {
-      background: #14171C;
-      border: 1px solid rgba(212, 175, 55, 0.15);
-    }
-    .glass-card:hover {
-      border-color: rgba(212, 175, 55, 0.4);
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Catalyst Ads Co. | Digital Marketing &amp; SEO Agency</title>
+<meta name="description" content="Catalyst Ads Co. is a strategic digital growth partner: SEO, Google Ads, Meta Ads, social media, websites and lead generation. Marketing That Moves Businesses Forward.">
+<link rel="canonical" href="https://catalystadsco.online/">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Catalyst Ads Co."><meta property="og:title" content="Catalyst Ads Co. | Digital Marketing &amp; SEO Agency"><meta property="og:description" content="Catalyst Ads Co. is a strategic digital growth partner: SEO, Google Ads, Meta Ads, social media, websites and lead generation. Marketing That Moves Businesses Forward."><meta property="og:url" content="https://catalystadsco.online/"><meta property="og:image" content="https://catalystadsco.online/assets/logo.png">
+<meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#0d0c0a">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 </head>
-<body class="antialiased selection:bg-brand-gold selection:text-brand-black">
-
-  <!-- 1. ANNOUNCEMENT STRIP -->
-  <div class="bg-brand-dark border-b border-brand-border/60 py-2 px-4 text-center text-xs font-medium">
-    <div class="max-w-7xl mx-auto flex items-center justify-center gap-2">
-      <span class="inline-block w-2 h-2 rounded-full bg-brand-gold"></span>
-      <span class="text-gray-300">Strategy. Creativity. Performance. Growth.</span>
-      <span class="hidden md:inline text-brand-border">|</span>
-      <a href="https://wa.me/919798948007?text=Hi%20Catalyst%20Ads%20Co.,%20I'm%20interested%20in%20a%20digital%20marketing%20consultation." target="_blank" rel="noopener noreferrer" class="hidden md:inline text-brand-gold hover:underline font-semibold ml-1">
-        Chat with Us on WhatsApp &rarr;
-      </a>
-    </div>
-  </div>
-
-  <!-- 2. STICKY NAVIGATION -->
-  <header class="sticky top-0 z-40 bg-brand-black/95 backdrop-blur-md border-b border-brand-border">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      
-      <!-- Logo Container with Crisp Inline SVG / Image Fallback -->
-      <a href="#" class="flex items-center gap-3">
-        <div class="h-12 px-3 py-1 bg-brand-dark rounded-lg border border-brand-gold/30 flex items-center justify-center">
-          <!-- Main Image Tag with Direct Fallback -->
-          <img 
-            src="ChatGPT Image Sep 17, 2026, 07_38_44 PM.png" 
-            alt="Catalyst Ads Co." 
-            class="h-9 w-auto object-contain"
-            onerror="this.style.display='none'; document.getElementById('logo-fallback-badge').style.display='flex';"
-          />
-          <!-- Inline Backup Logo Badge (Renders instantly if image path is unavailable) -->
-          <div id="logo-fallback-badge" class="hidden items-center gap-2">
-            <div class="w-7 h-7 rounded bg-brand-gold flex items-center justify-center text-brand-black font-extrabold text-xs">CA</div>
-            <span class="text-sm font-bold tracking-tight text-white">CATALYST <span class="text-brand-gold">ADS CO.</span></span>
-          </div>
-        </div>
-      </a>
-
-      <!-- Clean Desktop Nav -->
-      <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-gray-300">
-        <a href="#home" class="hover:text-brand-gold transition-colors">Home</a>
-        <a href="#services" class="hover:text-brand-gold transition-colors">Services</a>
-        <a href="#approach" class="hover:text-brand-gold transition-colors">Our Approach</a>
-        <a href="#industries" class="hover:text-brand-gold transition-colors">Industries</a>
-        <a href="#about" class="hover:text-brand-gold transition-colors">About Us</a>
-        <a href="#faq" class="hover:text-brand-gold transition-colors">FAQ</a>
-      </nav>
-
-      <!-- Primary CTA -->
-      <div class="hidden sm:flex items-center">
-        <a href="https://wa.me/919798948007?text=Hi%20Catalyst%20Ads%20Co.,%20I'm%20interested%20in%20your%20digital%20marketing%20services.%20I'd%20like%20to%20discuss%20my%20business%20goals." target="_blank" rel="noopener noreferrer" class="gold-gradient-bg text-brand-black px-5 py-2.5 rounded-lg font-bold text-sm hover:brightness-110 transition-all flex items-center gap-2">
-          <i data-lucide="message-square" class="w-4 h-4"></i>
-          <span>Chat on WhatsApp</span>
-        </a>
-      </div>
-
-      <!-- Mobile Menu Toggle -->
-      <button id="mobile-menu-btn" class="lg:hidden text-gray-300 p-2">
-        <i data-lucide="menu" id="menu-icon-open" class="w-6 h-6"></i>
-        <i data-lucide="x" id="menu-icon-close" class="w-6 h-6 hidden"></i>
-      </button>
-    </div>
-
-    <!-- Mobile Menu Drawer -->
-    <div id="mobile-menu" class="hidden lg:hidden bg-brand-dark border-b border-brand-border px-6 py-6 space-y-4">
-      <a href="#home" class="mobile-link block text-sm text-gray-200">Home</a>
-      <a href="#services" class="mobile-link block text-sm text-gray-200">Services</a>
-      <a href="#approach" class="mobile-link block text-sm text-gray-200">Our Approach</a>
-      <a href="#industries" class="mobile-link block text-sm text-gray-200">Industries</a>
-      <a href="#about" class="mobile-link block text-sm text-gray-200">About Us</a>
-      <a href="#faq" class="mobile-link block text-sm text-gray-200">FAQ</a>
-      <div class="pt-4 border-t border-brand-border">
-        <a href="https://wa.me/919798948007?text=Hi%20Catalyst%20Ads%20Co.,%20I'm%20interested%20in%20your%20digital%20marketing%20services." target="_blank" rel="noopener noreferrer" class="w-full gold-gradient-bg text-brand-black py-3 rounded-lg font-bold text-center block">
-          Chat on WhatsApp
-        </a>
-      </div>
-    </div>
-  </header>
-
-  <!-- 3. HERO SECTION (Clean, Direct, High Conversion) -->
-  <section id="home" class="py-16 lg:py-24 relative">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid lg:grid-cols-12 gap-12 items-center">
-        
-        <!-- Left Column: Copy -->
-        <div class="lg:col-span-7 text-center lg:text-left">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-card border border-brand-gold/30 text-brand-gold text-xs font-semibold mb-6">
-            <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
-            <span>Performance Marketing Agency</span>
-          </div>
-
-          <h1 class="text-3xl sm:text-5xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight mb-6">
-            Turn Your Digital Presence Into Your Next <span class="gold-gradient-text">Growth Advantage.</span>
-          </h1>
-
-          <p class="text-base sm:text-lg text-gray-300 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed mb-8">
-            We help ambitious businesses build stronger brands, reach high-intent target audiences, and generate qualified leads through SEO, Google Ads, and Meta campaigns.
-          </p>
-
-          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-            <a href="https://wa.me/919798948007?text=Hi%20Catalyst%20Ads%20Co.,%20I'm%20ready%20to%20discuss%20our%20digital%20growth%20strategy." target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto gold-gradient-bg text-brand-black px-8 py-4 rounded-xl font-bold text-base hover:brightness-110 transition-all flex items-center justify-center gap-3">
-              <i data-lucide="message-square" class="w-5 h-5"></i>
-              <span>Get Free Consultation</span>
-            </a>
-            
-            <a href="#services" class="w-full sm:w-auto bg-brand-card text-gray-200 border border-brand-border px-8 py-4 rounded-xl font-semibold text-base hover:border-brand-gold/40 transition-all text-center">
-              Explore Services
-            </a>
-          </div>
-        </div>
-
-        <!-- Right Column: Clean Analytics Dashboard Graphic (Native Code) -->
-        <div class="lg:col-span-5">
-          <div class="bg-brand-card p-6 rounded-2xl border border-brand-gold/30 shadow-xl">
-            <div class="flex items-center justify-between pb-4 border-b border-brand-border mb-4">
-              <div class="flex items-center gap-2">
-                <span class="w-3 h-3 rounded-full bg-red-500"></span>
-                <span class="w-3 h-3 rounded-full bg-yellow-500"></span>
-                <span class="w-3 h-3 rounded-full bg-green-500"></span>
-              </div>
-              <span class="text-xs text-brand-gold font-mono font-semibold">Growth Overview</span>
-            </div>
-
-            <div class="space-y-4">
-              <div class="p-4 rounded-xl bg-brand-dark border border-brand-border">
-                <div class="text-xs text-gray-400">Campaign Traffic Growth</div>
-                <div class="text-xl font-bold text-white mt-1">+142% Enquiries</div>
-                <div class="w-full bg-brand-border h-2 rounded-full mt-3 overflow-hidden">
-                  <div class="gold-gradient-bg h-full w-4/5 rounded-full"></div>
-                </div>
-              </div>
-
-              <div class="grid grid-cols-2 gap-3">
-                <div class="p-3 rounded-lg bg-brand-dark border border-brand-border">
-                  <div class="text-xs text-gray-400">Core Focus</div>
-                  <div class="text-xs font-semibold text-brand-gold mt-1">High-Intent Leads</div>
-                </div>
-                <div class="p-3 rounded-lg bg-brand-dark border border-brand-border">
-                  <div class="text-xs text-gray-400">Primary Channels</div>
-                  <div class="text-xs font-semibold text-white mt-1">SEO & Paid Search</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- 4. STREAMLINED SERVICES SECTION -->
-  <section id="services" class="py-20 bg-brand-dark/60 border-t border-brand-border">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="text-center max-w-2xl mx-auto mb-12">
-        <span class="text-xs font-semibold text-brand-gold uppercase tracking-wider">What We Do</span>
-        <h2 class="text-3xl font-bold text-white mt-2">Core Digital Marketing Services</h2>
-      </div>
-
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        
-        <!-- Service 1 -->
-        <div class="glass-card p-6 rounded-xl flex flex-col justify-between">
-          <div>
-            <div class="w-10 h-10 rounded-lg bg-brand-gold/10 border border-brand-gold/30 flex items-center justify-center text-brand-gold mb-4">
-              <i data-lucide="search" class="w-5 h-5"></i>
-            </div>
-            <h3 class="text-lg font-bold text-white mb-2">Search Engine Optimization (SEO)</h3>
-            <p class="text-gray-400 text-sm mb-4">Improve Google search rankings, optimize technical site health, and drive consistent organic traffic.</p>
-          </div>
-          <a href="https://wa.me/919798948007?text=Hi%20Catalyst%20Ads%20Co.,%20I'd%20like%20to%20discuss%20SEO%20Services." target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-brand-gold hover:underline flex items-center gap-1">
-            Discuss SEO Strategy &rarr;
-          </a>
-        </div>
-
-        <!-- Service 2 -->
-        <div class="glass-card p-6 rounded-xl flex flex-col justify-between">
-          <div>
-            <div class="w-10 h-10 rounded-lg bg-brand-gold/10 border border-brand-gold/30 flex items-center justify-center text-brand-gold mb-4">
-              <i data-lucide="target" class="w-5 h-5"></i>
-            </div>
-            <h3 class="text-lg font-bold text-white mb-2">Google Ads & PPC Search</h3>
-            <p class="text-gray-400 text-sm mb-4">Capture immediate commercial search demand with targeted Google Search & Shopping campaigns.</p>
-          </div>
-          <a href="https://wa.me/919798948007?text=Hi%20Catalyst%20Ads%20Co.,%20I'm%20interested%20in%20Google%20Ads." target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-brand-gold hover:underline flex items-center gap-1">
-            Discuss Paid Search &rarr;
-          </a>
-        </div>
-
-        <!-- Service 3 -->
-        <div class="glass-card p-6 rounded-xl flex flex-col justify-between">
-          <div>
-            <div class="w-10 h-10 rounded-lg bg-brand-gold/10 border border-brand-gold/30 flex items-center justify-center text-brand-gold mb-4">
-              <i data-lucide="share-2" class="w-5 h-5"></i>
-            </div>
-            <h3 class="text-lg font-bold text-white mb-2">Meta Ads (Instagram & Facebook)</h3>
-            <p class="text-gray-400 text-sm mb-4">Engage specific target demographics with high-converting creative ad variations and retargeting.</p>
-          </div>
-          <a href="https://wa.me/919798948007?text=Hi%20Catalyst%20Ads%20Co.,%20I'd%20like%20to%20discuss%20Meta%20Ads." target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-brand-gold hover:underline flex items-center gap-1">
-            Discuss Meta Ads &rarr;
-          </a>
-        </div>
-
-        <!-- Service 4 -->
-        <div class="glass-card p-6 rounded-xl flex flex-col justify-between">
-          <div>
-            <div class="w-10 h-10 rounded-lg bg-brand-gold/10 border border-brand-gold/30 flex items-center justify-center text-brand-gold mb-4">
-              <i data-lucide="layout" class="w-5 h-5"></i>
-            </div>
-            <h3 class="text-lg font-bold text-white mb-2">Website & Landing Page Design</h3>
-            <p class="text-gray-400 text-sm mb-4">Design fast, responsive, and conversion-focused websites engineered to turn visitors into leads.</p>
-          </div>
-          <a href="https://wa.me/919798948007?text=Hi%20Catalyst%20Ads%20Co.,%20I'm%20interested%20in%20Website%20Design." target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-brand-gold hover:underline flex items-center gap-1">
-            Discuss Web Design &rarr;
-          </a>
-        </div>
-
-        <!-- Service 5 -->
-        <div class="glass-card p-6 rounded-xl flex flex-col justify-between">
-          <div>
-            <div class="w-10 h-10 rounded-lg bg-brand-gold/10 border border-brand-gold/30 flex items-center justify-center text-brand-gold mb-4">
-              <i data-lucide="user-check" class="w-5 h-5"></i>
-            </div>
-            <h3 class="text-lg font-bold text-white mb-2">Lead Generation Systems</h3>
-            <p class="text-gray-400 text-sm mb-4">Build multi-step lead capture pipelines connecting high-intent inquiries directly to WhatsApp.</p>
-          </div>
-          <a href="https://wa.me/919798948007?text=Hi%20Catalyst%20Ads%20Co.,%20I'd%20like%20to%20discuss%20Lead%20Generation." target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-brand-gold hover:underline flex items-center gap-1">
-            Discuss Lead Gen &rarr;
-          </a>
-        </div>
-
-        <!-- Service 6 -->
-        <div class="glass-card p-6 rounded-xl flex flex-col justify-between">
-          <div>
-            <div class="w-10 h-10 rounded-lg bg-brand-gold/10 border border-brand-gold/30 flex items-center justify-center text-brand-gold mb-4">
-              <i data-lucide="line-chart" class="w-5 h-5"></i>
-            </div>
-            <h3 class="text-lg font-bold text-white mb-2">Analytics & Performance Tracking</h3>
-            <p class="text-gray-400 text-sm mb-4">Set up clear tracking, conversion analytics, and transparent monthly performance reporting.</p>
-          </div>
-          <a href="https://wa.me/919798948007?text=Hi%20Catalyst%20Ads%20Co.,%20I'd%20like%20to%20discuss%20Analytics." target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-brand-gold hover:underline flex items-center gap-1">
-            Discuss Analytics &rarr;
-          </a>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- 5. OUR 4-STEP APPROACH -->
-  <section id="approach" class="py-20 bg-brand-black">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="text-center max-w-2xl mx-auto mb-12">
-        <span class="text-xs font-semibold text-brand-gold uppercase tracking-wider">How We Work</span>
-        <h2 class="text-3xl font-bold text-white mt-2">Simple 4-Step Process</h2>
-      </div>
-
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="p-6 rounded-xl bg-brand-card border border-brand-border">
-          <div class="text-2xl font-bold text-brand-gold mb-2">01. Discover</div>
-          <p class="text-xs text-gray-400 leading-relaxed">Understanding your business model, target audience, and current digital bottlenecks.</p>
-        </div>
-        <div class="p-6 rounded-xl bg-brand-card border border-brand-border">
-          <div class="text-2xl font-bold text-brand-gold mb-2">02. Strategise</div>
-          <p class="text-xs text-gray-400 leading-relaxed">Building a tailored campaign roadmap and selecting the highest-ROI marketing channels.</p>
-        </div>
-        <div class="p-6 rounded-xl bg-brand-card border border-brand-border">
-          <div class="text-2xl font-bold text-brand-gold mb-2">03. Execute</div>
-          <p class="text-xs text-gray-400 leading-relaxed">Launching targeted ads, optimizing search architecture, and deploying high-converting copy.</p>
-        </div>
-        <div class="p-6 rounded-xl bg-brand-card border border-brand-border">
-          <div class="text-2xl font-bold text-brand-gold mb-2">04. Optimise</div>
-          <p class="text-xs text-gray-400 leading-relaxed">Refining campaigns, reducing cost-per-lead, and scaling top-performing assets.</p>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- 6. INDUSTRIES SERVED -->
-  <section id="industries" class="py-16 bg-brand-dark/40 border-y border-brand-border">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <span class="text-xs font-semibold text-brand-gold uppercase tracking-wider block mb-6">Industries We Scale</span>
-      
-      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-        <div class="p-4 rounded-lg bg-brand-card border border-brand-border text-xs text-gray-300 font-medium">Professional Services</div>
-        <div class="p-4 rounded-lg bg-brand-card border border-brand-border text-xs text-gray-300 font-medium">Education & Institutes</div>
-        <div class="p-4 rounded-lg bg-brand-card border border-brand-border text-xs text-gray-300 font-medium">Retail & E-Commerce</div>
-        <div class="p-4 rounded-lg bg-brand-card border border-brand-border text-xs text-gray-300 font-medium">Tech & SaaS</div>
-        <div class="p-4 rounded-lg bg-brand-card border border-brand-border text-xs text-gray-300 font-medium">Real Estate</div>
-        <div class="p-4 rounded-lg bg-brand-card border border-brand-border text-xs text-gray-300 font-medium">Local Businesses</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 7. ABOUT US -->
-  <section id="about" class="py-20 bg-brand-black">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <span class="text-xs font-semibold text-brand-gold uppercase tracking-wider">About Catalyst Ads Co.</span>
-      <h2 class="text-3xl font-bold text-white mt-2 mb-6">Marketing That Moves Businesses Forward.</h2>
-      <p class="text-gray-300 text-sm leading-relaxed max-w-3xl mx-auto mb-8">
-        We are a strategic digital growth partner focused on direct outcomes. We eliminate unnecessary complexity and focus on clear digital marketing execution—helping businesses improve visibility, attract relevant customers, and generate qualified leads.
-      </p>
-
-      <a href="https://wa.me/919798948007?text=Hi%20Catalyst%20Ads%20Co.,%20I'd%20like%20to%20learn%20more%20about%20working%20together." target="_blank" rel="noopener noreferrer" class="gold-gradient-bg text-brand-black px-6 py-3 rounded-lg font-bold text-sm inline-flex items-center gap-2">
-        <i data-lucide="message-square" class="w-4 h-4"></i>
-        <span>Chat With Our Team</span>
-      </a>
-    </div>
-  </section>
-
-  <!-- 8. FAQ ACCORDION -->
-  <section id="faq" class="py-20 bg-brand-dark/40 border-t border-brand-border">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="text-center mb-12">
-        <span class="text-xs font-semibold text-brand-gold uppercase tracking-wider">FAQ</span>
-        <h2 class="text-2xl font-bold text-white mt-1">Frequently Asked Questions</h2>
-      </div>
-
-      <div class="space-y-3">
-        <div class="bg-brand-card border border-brand-border rounded-lg overflow-hidden">
-          <button class="faq-btn w-full p-4 text-left font-semibold text-sm text-white flex justify-between items-center">
-            <span>What services does Catalyst Ads Co. offer?</span>
-            <i data-lucide="chevron-down" class="w-4 h-4 text-brand-gold transition-transform"></i>
-          </button>
-          <div class="faq-answer hidden p-4 text-xs text-gray-300 border-t border-brand-border">
-            We provide Search Engine Optimization (SEO), Google Search Ads, Meta (Instagram/Facebook) Ads, Website & Landing Page Design, Lead Generation, and Analytics setup.
-          </div>
-        </div>
-
-        <div class="bg-brand-card border border-brand-border rounded-lg overflow-hidden">
-          <button class="faq-btn w-full p-4 text-left font-semibold text-sm text-white flex justify-between items-center">
-            <span>How do we get started?</span>
-            <i data-lucide="chevron-down" class="w-4 h-4 text-brand-gold transition-transform"></i>
-          </button>
-          <div class="faq-answer hidden p-4 text-xs text-gray-300 border-t border-brand-border">
-            Click any "Chat on WhatsApp" button or submit our quick contact form below. We will discuss your goals and propose a simple action plan.
-          </div>
-        </div>
-
-        <div class="bg-brand-card border border-brand-border rounded-lg overflow-hidden">
-          <button class="faq-btn w-full p-4 text-left font-semibold text-sm text-white flex justify-between items-center">
-            <span>How can I contact Catalyst Ads Co.?</span>
-            <i data-lucide="chevron-down" class="w-4 h-4 text-brand-gold transition-transform"></i>
-          </button>
-          <div class="faq-answer hidden p-4 text-xs text-gray-300 border-t border-brand-border">
-            Our primary contact channel is WhatsApp for fast response: +91 9798948007. You can also connect with us on Instagram, Facebook, and LinkedIn.
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- 9. CONTACT & WHATSAPP ENQUIRY -->
-  <section id="contact" class="py-20 bg-brand-black">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="bg-brand-card p-8 rounded-2xl border border-brand-gold/30">
-        <div class="text-center mb-8">
-          <span class="text-xs font-semibold text-brand-gold uppercase tracking-wider">Get In Touch</span>
-          <h2 class="text-2xl font-bold text-white mt-1">Ready to Grow Your Business?</h2>
-          <p class="text-xs text-gray-400 mt-2">Send us a direct message on WhatsApp or fill out the short form below.</p>
-        </div>
-
-        <form id="enquiry-form" class="space-y-4 max-w-xl mx-auto">
-          <div class="grid sm:grid-cols-2 gap-4">
-            <div>
-              <label class="block text-xs font-medium text-gray-300 mb-1">Your Name *</label>
-              <input type="text" id="form-name" required placeholder="e.g. Rahul Sharma" class="w-full bg-brand-dark border border-brand-border rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-brand-gold">
-            </div>
-            <div>
-              <label class="block text-xs font-medium text-gray-300 mb-1">Company / Brand</label>
-              <input type="text" id="form-company" placeholder="e.g. Apex Business" class="w-full bg-brand-dark border border-brand-border rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-brand-gold">
-            </div>
-          </div>
-
-          <div>
-            <label class="block text-xs font-medium text-gray-300 mb-1">Service Interest *</label>
-            <select id="form-service" class="w-full bg-brand-dark border border-brand-border rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-brand-gold">
-              <option value="General Digital Strategy">General Digital Strategy</option>
-              <option value="Search Engine Optimization (SEO)">Search Engine Optimization (SEO)</option>
-              <option value="Google Ads">Google Ads</option>
-              <option value="Meta Ads">Meta Ads</option>
-              <option value="Website Design">Website Design</option>
-            </select>
-          </div>
-
-          <div>
-            <label class="block text-xs font-medium text-gray-300 mb-1">Message / Project Brief</label>
-            <textarea id="form-message" rows="3" placeholder="Describe your growth goal..." class="w-full bg-brand-dark border border-brand-border rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-brand-gold"></textarea>
-          </div>
-
-          <button type="submit" class="w-full gold-gradient-bg text-brand-black font-bold py-3 rounded-lg text-sm hover:brightness-110 transition-all flex items-center justify-center gap-2">
-            <i data-lucide="send" class="w-4 h-4"></i>
-            <span>Submit via WhatsApp</span>
-          </button>
-        </form>
-
-        <div class="mt-8 pt-6 border-t border-brand-border text-center">
-          <span class="text-xs text-gray-400 block mb-3">Official Social Profiles:</span>
-          <div class="flex items-center justify-center gap-4">
-            <a href="https://www.instagram.com/catalystadsco?utm_source=ig_web_button_share_sheet&psln=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" class="p-2 rounded bg-brand-dark text-brand-gold hover:text-white border border-brand-border">
-              <i data-lucide="instagram" class="w-4 h-4"></i>
-            </a>
-            <a href="https://www.facebook.com/profile.php?id=61590844766527" target="_blank" rel="noopener noreferrer" class="p-2 rounded bg-brand-dark text-brand-gold hover:text-white border border-brand-border">
-              <i data-lucide="facebook" class="w-4 h-4"></i>
-            </a>
-            <a href="https://www.linkedin.com/company/catalyst-ads-co/" target="_blank" rel="noopener noreferrer" class="p-2 rounded bg-brand-dark text-brand-gold hover:text-white border border-brand-border">
-              <i data-lucide="linkedin" class="w-4 h-4"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- 10. FOOTER -->
-  <footer class="bg-brand-dark border-t border-brand-border py-8 text-xs text-gray-400">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <div>
-        © <span id="copyright-year">2026</span> Catalyst Ads Co. All rights reserved. | <a href="https://catalystadsco.online" class="hover:text-brand-gold">catalystadsco.online</a>
-      </div>
-      <div>
-        WhatsApp Support: <a href="https://wa.me/919798948007" target="_blank" class="text-brand-gold hover:underline">+91 9798948007</a>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    // Initialize Icons
-    lucide.createIcons();
-
-    // Copyright Year
-    document.getElementById('copyright-year').textContent = new Date().getFullYear();
-
-    // Mobile Menu Toggle
-    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const menuOpenIcon = document.getElementById('menu-icon-open');
-    const menuCloseIcon = document.getElementById('menu-icon-close');
-
-    mobileMenuBtn.addEventListener('click', () => {
-      const isOpen = mobileMenu.classList.contains('hidden');
-      if (isOpen) {
-        mobileMenu.classList.remove('hidden');
-        menuOpenIcon.classList.add('hidden');
-        menuCloseIcon.classList.remove('hidden');
-      } else {
-        mobileMenu.classList.add('hidden');
-        menuOpenIcon.classList.remove('hidden');
-        menuCloseIcon.classList.add('hidden');
-      }
-    });
-
-    document.querySelectorAll('.mobile-link').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-        menuOpenIcon.classList.remove('hidden');
-        menuCloseIcon.classList.add('hidden');
-      });
-    });
-
-    // FAQ Accordion
-    const faqBtns = document.querySelectorAll('.faq-btn');
-    faqBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const answer = btn.nextElementSibling;
-        const isHidden = answer.classList.contains('hidden');
-
-        document.querySelectorAll('.faq-answer').forEach(a => a.classList.add('hidden'));
-
-        if (isHidden) {
-          answer.classList.remove('hidden');
-        }
-      });
-    });
-
-    // Form Submit to WhatsApp
-    const enquiryForm = document.getElementById('enquiry-form');
-    enquiryForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-
-      const name = document.getElementById('form-name').value;
-      const company = document.getElementById('form-company').value || 'N/A';
-      const service = document.getElementById('form-service').value;
-      const message = document.getElementById('form-message').value || 'No message provided.';
-
-      const text = `Hi Catalyst Ads Co.,%0A%0AEnquiry Details:%0A- Name: ${encodeURIComponent(name)}%0A- Company: ${encodeURIComponent(company)}%0A- Service: ${encodeURIComponent(service)}%0A- Message: ${encodeURIComponent(message)}`;
-
-      window.open(`https://wa.me/919798948007?text=${text}`, '_blank');
-    });
-  </script>
-</body>
-</html>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="strip">Strategy. Creativity. Performance. Growth.</div>
+<header class="nav"><div class="wrap navin">
+<a href="index.html#home" class="brand" aria-label="Catalyst Ads Co. home"><img src="assets/logo.png" alt="Catalyst Ads Co." width="160" height="48"></a>
+<nav id="menu" aria-label="Main"><a href="index.html#home" aria-current="page">Home</a><a href="index.html#services">Services</a><a href="index.html#industries">Industries</a><a href="index.html#approach">Our approach</a><a href="index.html#about">About us</a><a href="blog.html">Blog</a><a href="index.html#contact">Contact</a><a class="btn sm mobonly" href="https://wa.me/919798948007" data-wa target="_blank" rel="noopener noreferrer"><svg class="b" aria-hidden="true" focusable="false"><use href="assets/icons.svg#wa"/></svg>WhatsApp Us</a></nav>
+<a class="btn sm deskonly" href="https://wa.me/919798948007" data-wa target="_blank" rel="noopener noreferrer"><svg class="b" aria-hidden="true" focusable="false"><use href="assets/icons.svg#wa"/></svg>WhatsApp Us</a>
+<button type="button" class="burger" aria-expanded="false" aria-controls="menu" aria-label="Open menu"><span></span><span></span></button>
+</div></header>
+<main id="main">
+<section id="home" class="hero"><div class="wrap herogrid">
+<div class="herotxt"><p class="kicker">Digital growth partner</p>
+<h1>Turn Your Digital Presence Into Your Next Growth Advantage.</h1>
+<p class="lead">We help ambitious businesses build stronger brands, reach the right audiences, and turn digital marketing into meaningful business opportunities.</p>
+<div class="ctas"><a class="btn" href="https://wa.me/919798948007" data-wa target="_blank" rel="noopener noreferrer"><svg class="b" aria-hidden="true" focusable="false"><use href="assets/icons.svg#wa"/></svg>Let’s Talk Growth</a><a class="btn ghost" href="#services">Explore Our Services</a></div>
+<p class="tag">Marketing That Moves Businesses Forward.</p></div>
+<div class="heroviz"><img class="heroimg" src="assets/img/hero.svg" alt="Illustration of a marketing dashboard with a growth chart and a phone showing campaign results" width="680" height="560" fetchpriority="high"></div>
+</div></section>
+<section class="band"><div class="wrap"><h2 class="sm">Built for businesses that want to grow</h2><ul class="chips"><li>Startups</li><li>Small and medium businesses</li><li>B2B companies</li><li>Local businesses</li><li>E-commerce brands</li><li>Growing businesses</li></ul></div></section>
+<section class="dark" id="dashboard"><div class="wrap">
+<div class="head"><h2>Marketing, made measurable</h2><p>This is how we like to report: clear, honest and tied to your goals.</p></div>
+<div class="dash" id="dash"><div class="dtop"><span class="demo">Sample Dashboard · Illustrative Demo Data</span>
+<div class="tabs" role="tablist" aria-label="Date range"><button type="button" role="tab" aria-selected="true" data-r="7">7 days</button><button type="button" role="tab" aria-selected="false" data-r="30">30 days</button><button type="button" role="tab" aria-selected="false" data-r="90">90 days</button></div></div>
+<div class="kpis"><div><small>Website visits</small><b id="k1"></b></div><div><small>Engagement</small><b id="k2"></b></div><div><small>Enquiries</small><b id="k3"></b></div><div><small>Conversion rate</small><b id="k4"></b></div></div>
+<div class="dgrid"><div class="panel wide"><h3>Traffic trend</h3><svg id="chart" viewBox="0 0 600 200" role="img" aria-label="Sample traffic trend line chart"></svg></div>
+<div class="panel"><h3>Lead funnel</h3><div id="funnel"></div></div>
+<div class="panel"><h3>Channel comparison</h3><div id="chan"></div></div>
+<div class="panel"><h3>SEO visibility</h3><div id="seo"></div></div>
+<div class="panel"><h3>Insight</h3><p class="ins-t" id="insight"></p></div></div></div>
+</div></section>
+<section id="services"><div class="wrap"><div class="head"><h2>Services built around your growth</h2><p>Pick one service or combine several into a single plan.</p></div><div class="grid3"><article class="card svc"><span class="ico"><svg viewBox="0 0 24 24" class="i" aria-hidden="true"><path d="M11 4a7 7 0 1 0 0 14a7 7 0 0 0 0-14zM21 21l-5-5"/></svg></span><h3>Search Engine Optimization</h3><p>Be easier to find when customers search. Technical health, content and local visibility, built step by step.</p><a class="lnk" href="https://wa.me/919798948007" data-svc="Search Engine Optimization" target="_blank" rel="noopener noreferrer">Discuss this service</a></article><article class="card svc"><span class="ico"><svg viewBox="0 0 24 24" class="i" aria-hidden="true"><path d="M3 11l14-6v14L3 13zM7 14l1 6h3l-1-5"/></svg></span><h3>Google Ads &amp; Paid Search</h3><p>Reach people who are already looking for what you offer, with campaigns structured around real business goals.</p><a class="lnk" href="https://wa.me/919798948007" data-svc="Google Ads &amp; Paid Search" target="_blank" rel="noopener noreferrer">Discuss this service</a></article><article class="card svc"><span class="ico"><svg viewBox="0 0 24 24" class="i" aria-hidden="true"><path d="M4 12c0-4 3-6 5-3l6 6c2 3 5 1 5-3M4 12c0 4 3 6 5 3"/></svg></span><h3>Meta Ads &amp; Performance Marketing</h3><p>Creative and audience testing across Facebook and Instagram, tracked against the actions that matter to you.</p><a class="lnk" href="https://wa.me/919798948007" data-svc="Meta Ads &amp; Performance Marketing" target="_blank" rel="noopener noreferrer">Discuss this service</a></article><article class="card svc"><span class="ico"><svg viewBox="0 0 24 24" class="i" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg></span><h3>Social Media Marketing</h3><p>A consistent, on-brand presence that builds attention and gives people a reason to follow and enquire.</p><a class="lnk" href="https://wa.me/919798948007" data-svc="Social Media Marketing" target="_blank" rel="noopener noreferrer">Discuss this service</a></article><article class="card svc"><span class="ico"><svg viewBox="0 0 24 24" class="i" aria-hidden="true"><path d="M5 4h14v16H5zM8 9h8M8 13h8M8 17h5"/></svg></span><h3>Content &amp; Creative Strategy</h3><p>Messaging, visuals and content plans that explain your value clearly and stay memorable.</p><a class="lnk" href="https://wa.me/919798948007" data-svc="Content &amp; Creative Strategy" target="_blank" rel="noopener noreferrer">Discuss this service</a></article><article class="card svc"><span class="ico"><svg viewBox="0 0 24 24" class="i" aria-hidden="true"><path d="M3 5h18v14H3zM3 9h18"/></svg></span><h3>Website Design &amp; Landing Pages</h3><p>Fast, clear pages designed to turn visits into conversations.</p><a class="lnk" href="https://wa.me/919798948007" data-svc="Website Design &amp; Landing Pages" target="_blank" rel="noopener noreferrer">Discuss this service</a></article><article class="card svc"><span class="ico"><svg viewBox="0 0 24 24" class="i" aria-hidden="true"><path d="M3 5h18l-7 8v6l-4-2v-4z"/></svg></span><h3>Lead Generation</h3><p>Systems that bring relevant enquiries to your door, from first click to first conversation.</p><a class="lnk" href="https://wa.me/919798948007" data-svc="Lead Generation" target="_blank" rel="noopener noreferrer">Discuss this service</a></article><article class="card svc"><span class="ico"><svg viewBox="0 0 24 24" class="i" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span><h3>Conversion Rate Optimization</h3><p>Find where visitors drop off and test improvements, so more of your traffic becomes opportunity.</p><a class="lnk" href="https://wa.me/919798948007" data-svc="Conversion Rate Optimization" target="_blank" rel="noopener noreferrer">Discuss this service</a></article><article class="card svc"><span class="ico"><svg viewBox="0 0 24 24" class="i" aria-hidden="true"><path d="M3 3v18h18M7 15l4-5 3 3 5-7"/></svg></span><h3>Analytics &amp; Reporting</h3><p>Plain-language reports that show what is working, what is not, and what we will do next.</p><a class="lnk" href="https://wa.me/919798948007" data-svc="Analytics &amp; Reporting" target="_blank" rel="noopener noreferrer">Discuss this service</a></article><article class="card svc"><span class="ico"><svg viewBox="0 0 24 24" class="i" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8M15 7h6v6"/></svg></span><h3>Growth Marketing Strategy</h3><p>A joined-up plan across channels, built around your audience, budget and stage of business.</p><a class="lnk" href="https://wa.me/919798948007" data-svc="Growth Marketing Strategy" target="_blank" rel="noopener noreferrer">Discuss this service</a></article></div></div></section>
+<section class="dark" id="why"><div class="wrap"><div class="head"><h2>Why choose Catalyst Ads Co.</h2><p>We make no promises of guaranteed rankings, leads or sales. We promise a clear plan and honest work.</p></div><div class="whyg"><div class='why'><h3>Strategy before execution</h3><p>We agree on the goal and the audience before spending a rupee on ads.</p></div><div class='why'><h3>Audience-focused</h3><p>Every message starts with who you want to reach and what they need.</p></div><div class='why'><h3>Creative thinking</h3><p>Ideas that make your brand easier to notice and remember.</p></div><div class='why'><h3>Data-informed decisions</h3><p>Choices backed by measurement, not guesswork.</p></div><div class='why'><h3>Clear communication</h3><p>Simple updates, honest expectations, no jargon.</p></div><div class='why'><h3>Continuous testing</h3><p>We keep testing and refining as we learn.</p></div><div class='why'><h3>Business-focused outcomes</h3><p>We measure what matters to your business, not vanity numbers.</p></div></div></div></section>
+<section id="approach"><div class="wrap"><div class="head"><h2>Our approach</h2><p>Four simple steps from first conversation to steady improvement.</p></div><ol class="steps"><li><span class='n'>01</span><h3>Discover</h3><p>Understand the business, audience, challenges and goals.</p></li><li><span class='n'>02</span><h3>Strategise</h3><p>Identify opportunities and build a focused marketing plan.</p></li><li><span class='n'>03</span><h3>Execute</h3><p>Launch relevant campaigns, content and digital experiences.</p></li><li><span class='n'>04</span><h3>Optimise</h3><p>Measure meaningful results, learn and keep improving.</p></li></ol></div></section>
+<section class="band" id="industries"><div class="wrap"><div class="head"><h2>Industries we can serve</h2><p>Areas where we can help. We have not listed any client names.</p></div><ul class="chips big"><li>Professional services</li><li>Education and training</li><li>Retail and e-commerce</li><li>Technology and SaaS</li><li>Real estate</li><li>Local and service businesses</li><li>B2B companies</li></ul></div></section>
+<section id="work"><div class="wrap"><div class="head"><h2>Selected work</h2><p>Concept examples while we build our client portfolio. They are not real client results.</p></div><div class="grid3"><article class='card work'><figure class='fig'><img src='assets/img/work-1.svg' alt='Concept website for a local services business with a clear call to action and a map section' width='800' height='520' loading='lazy'><span class='badge'>Concept Project</span></figure><h3>Local services brand</h3><p>Search and lead-generation concept. A sample layout to be replaced with a real case study.</p></article><article class='card work'><figure class='fig'><img src='assets/img/work-2.svg' alt='Concept storefront layout with a product grid' width='800' height='520' loading='lazy'><span class='badge'>Illustrative Example</span></figure><h3>E-commerce store</h3><p>Paid social and landing page concept. A sample layout to be replaced with a real case study.</p></article><article class='card work'><figure class='fig'><img src='assets/img/work-3.svg' alt='Concept reporting page with charts and a content sidebar' width='800' height='520' loading='lazy'><span class='badge'>Concept Project</span></figure><h3>B2B software firm</h3><p>Content and Google Ads concept. A sample layout to be replaced with a real case study.</p></article></div></div></section>
+<section class="band" id="about"><div class="wrap aboutg"><img src="assets/img/about.svg" alt="Abstract illustration of layered strategy cards with a rising line" width="640" height="520" loading="lazy">
+<div><h2>About Catalyst Ads Co.</h2><p class="lead dk">We are a strategic digital growth partner. We help businesses improve online visibility, attract relevant customers, generate leads and grow their digital presence, through clear thinking and creative work.</p>
+<ul class="ticks"><li>Strategy before spending</li><li>Plain-language reporting</li><li>WhatsApp-first communication</li></ul></div></div></section>
+<section id="insights"><div class="wrap"><div class="head"><h2>From the blog</h2><p>Practical marketing ideas for growing businesses.</p></div><div class="grid3" id="latest"><p class="muted">Loading articles…</p></div><p class="more"><a class="btn ghost dk" href="blog.html">View all articles</a></p></div></section>
+<section class="dark" id="faq"><div class="wrap narrow"><h2>Frequently asked questions</h2><details><summary>What services does Catalyst Ads Co. offer?</summary><p>SEO, Google Ads, Meta Ads, social media, content, website design, lead generation, conversion optimisation, analytics and growth strategy.</p></details><details><summary>Which businesses can you work with?</summary><p>Startups, small and medium businesses, B2B companies, local businesses and e-commerce brands across many industries.</p></details><details><summary>How do we get started?</summary><p>Send us a WhatsApp message. We will talk through your business and goals first, then suggest next steps.</p></details><details><summary>Can we discuss a specific marketing challenge?</summary><p>Yes. Tell us what is not working and we will share how we would approach it.</p></details><details><summary>How do you approach campaign measurement?</summary><p>We agree on the actions that matter to your business, track them, and report in plain language. We do not promise specific rankings, leads or sales.</p></details><details><summary>How can I contact Catalyst Ads Co.?</summary><p>WhatsApp is our main channel. You can also message us on Instagram, Facebook or LinkedIn.</p></details></div></section>
+<section id="contact" class="contact"><div class="wrap cgrid">
+<div><h2>Let’s discuss your business goals</h2><p class="lead dk">Message us on WhatsApp and tell us what you want to achieve.</p>
+<a class="btn" href="https://wa.me/919798948007" data-wa target="_blank" rel="noopener noreferrer"><svg class="b" aria-hidden="true" focusable="false"><use href="assets/icons.svg#wa"/></svg>Chat on WhatsApp</a>
+<div class="soc"><a href="https://www.instagram.com/catalystadsco?utm_source=ig_web_button_share_sheet&amp;psln=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" aria-label="Instagram (opens in a new tab)"><svg class="b" aria-hidden="true" focusable="false"><use href="assets/icons.svg#ig"/></svg></a><a href="https://www.facebook.com/profile.php?id=61590844766527" target="_blank" rel="noopener noreferrer" aria-label="Facebook (opens in a new tab)"><svg class="b" aria-hidden="true" focusable="false"><use href="assets/icons.svg#fb"/></svg></a><a href="https://www.linkedin.com/company/catalyst-ads-co/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in a new tab)"><svg class="b" aria-hidden="true" focusable="false"><use href="assets/icons.svg#li"/></svg></a><a href="https://wa.me/919798948007" data-wa target="_blank" rel="noopener noreferrer" aria-label="WhatsApp (opens in a new tab)"><svg class="b" aria-hidden="true" focusable="false"><use href="assets/icons.svg#wa"/></svg></a></div></div>
+<form id="form" novalidate><p class="note">This form does not save your details. It opens WhatsApp with your message ready to send.</p>
+<label>Name<input type="text" name="name" required autocomplete="name"></label>
+<label>Email<input name="email" type="email" required autocomplete="email"></label>
+<label>Company<input type="text" name="company" autocomplete="organization"></label>
+<label>Service interest<select name="service"><option value="">Select a service</option><option>Search Engine Optimization</option><option>Google Ads &amp; Paid Search</option><option>Meta Ads &amp; Performance Marketing</option><option>Social Media Marketing</option><option>Content &amp; Creative Strategy</option><option>Website Design &amp; Landing Pages</option><option>Lead Generation</option><option>Conversion Rate Optimization</option><option>Analytics &amp; Reporting</option><option>Growth Marketing Strategy</option></select></label>
+<label>Message<textarea name="message" rows="4" required></textarea></label>
+<p class="err" id="err" role="alert"></p><button class="btn" type="submit"><svg class="b" aria-hidden="true" focusable="false"><use href="assets/icons.svg#wa"/></svg>Continue on WhatsApp</button></form>
+</div></section>
+</main>
+<footer><div class="wrap fgrid">
+<div><img src="assets/logo.png" alt="Catalyst Ads Co." width="150" height="45"><p>Strategic digital marketing for businesses that want to move forward.</p><div class="soc"><a href="https://www.instagram.com/catalystadsco?utm_source=ig_web_button_share_sheet&amp;psln=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" aria-label="Instagram (opens in a new tab)"><svg class="b" aria-hidden="true" focusable="false"><use href="assets/icons.svg#ig"/></svg></a><a href="https://www.facebook.com/profile.php?id=61590844766527" target="_blank" rel="noopener noreferrer" aria-label="Facebook (opens in a new tab)"><svg class="b" aria-hidden="true" focusable="false"><use href="assets/icons.svg#fb"/></svg></a><a href="https://www.linkedin.com/company/catalyst-ads-co/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in a new tab)"><svg class="b" aria-hidden="true" focusable="false"><use href="assets/icons.svg#li"/></svg></a><a href="https://wa.me/919798948007" data-wa target="_blank" rel="noopener noreferrer" aria-label="WhatsApp (opens in a new tab)"><svg class="b" aria-hidden="true" focusable="false"><use href="assets/icons.svg#wa"/></svg></a></div></div>
+<div><h4>Quick links</h4><a href="index.html#home">Home</a><a href="index.html#services">Services</a><a href="index.html#industries">Industries</a><a href="index.html#approach">Our approach</a><a href="index.html#about">About us</a><a href="blog.html">Blog</a><a href="index.html#contact">Contact</a></div>
+<div><h4>Contact</h4><a href="https://wa.me/919798948007" data-wa target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a></div>
+</div><p class="copy">© <span id="yr">2026</span> Catalyst Ads Co. All rights reserved.</p></footer>
+<a class="fab" href="https://wa.me/919798948007" data-wa target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp (opens in a new tab)"><svg class="b" aria-hidden="true" focusable="false"><use href="assets/icons.svg#wa"/></svg></a>
+<aside class="pop" id="pop" role="dialog" aria-modal="false" aria-labelledby="pop-t" hidden>
+<button class="x" aria-label="Close message" type="button">×</button>
+<span class="popic"><svg class="b" aria-hidden="true" focusable="false"><use href="assets/icons.svg#wa"/></svg></span><h3 id="pop-t">Have a growth goal in mind?</h3>
+<p>Tell us about your business on WhatsApp and we will suggest where to start.</p>
+<a class="btn" href="https://wa.me/919798948007" data-wa target="_blank" rel="noopener noreferrer"><svg class="b" aria-hidden="true" focusable="false"><use href="assets/icons.svg#wa"/></svg>Chat on WhatsApp</a><button class="later" type="button">Maybe later</button>
+</aside>
+<script src="js/main.js"></script>
+<script src="js/blog.js"></script>
+</body></html>
