@@ -1,0 +1,9 @@
+# Catalyst Ads Co.: all public pages may be crawled.
+User-agent: *
+Allow: /
+
+# ChatGPT search crawler (kept explicitly allowed so it is never blocked by mistake)
+User-agent: OAI-SearchBot
+Allow: /
+
+Sitemap: https://catalystadsco.online/sitemap.xml
