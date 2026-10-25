@@ -21,7 +21,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
-  <noscript><style>.rv{opacity:1!important;transform:none!important}</style></noscript>
+  <noscript><style>.rv{opacity:1!important;transform:none!important}
+    </style></noscript>
   <style>
     :root{
       --bg:#f5f1ea;
@@ -302,15 +303,29 @@
       *{animation:none!important;transition:none!important}
       .rv{opacity:1!important;transform:none!important}
     }
+      /* repair layer */
+    .skip{position:absolute;left:-9999px;top:8px;background:#141821;color:#fff;padding:10px 16px;border-radius:8px;font-weight:700;z-index:200}.skip:focus{left:8px}
+    a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #141821;outline-offset:3px}
+    footer a:focus-visible,.topbar a:focus-visible{outline-color:#ffc274}
+    .logo .mark{background:url(/favicon-96x96.png) center/cover no-repeat;box-shadow:none}.logo .mark::before{display:none}
+    img.footer-logo{width:72px;height:72px;background:none;border-radius:16px;margin-bottom:16px}img.footer-logo::before{display:none}
+    footer .fh{color:#fff;margin-bottom:14px;font-size:.95rem}
+    .logo small,.eyebrow{color:#b4410c}
+    a.category-card{display:flex}.chip{color:#b4410c}
+    .mini-card h3 a,.post-card h3 a{color:inherit}
+      .nav .logo small,.section-head .eyebrow,.post-card .content>a,.newsletter .eyebrow{color:#b4410c!important}
+    @media(max-width:900px){.menu{position:absolute;left:0;right:0;top:76px;background:#fff;border-bottom:1px solid var(--line);padding:16px 22px;display:none;flex-direction:column;align-items:flex-start;gap:14px}.menu.open{display:flex}.burger{display:grid;place-items:center;width:46px;height:46px;border-radius:10px;border:1px solid var(--line);background:var(--panel-soft)}}
+        .topbar .wrap>span:last-child{display:flex;flex-wrap:wrap;gap:2px 14px;justify-content:center}
   </style>
 </head>
 <body>
-  <div class="topbar">
+  <a class="skip" href="#articles">Skip to articles</a>
+  <aside class="topbar" aria-label="Contact details">
     <div class="wrap">
       <span>Performance marketing and AI search visibility. Based in Bengaluru.</span>
-      <span><a href="#">WhatsApp only: +91 97989 48007</a><span class="sep">|</span><a href="mailto:Catalystadscompany@gmail.com">Catalystadscompany@gmail.com</a></span>
+      <span><a href="https://wa.me/919798948007" target="_blank" rel="noopener">WhatsApp only: +91 97989 48007</a><span class="sep">|</span><a href="mailto:Catalystadscompany@gmail.com">Catalystadscompany@gmail.com</a></span>
     </div>
-  </div>
+  </aside>
 
   <header class="nav">
     <div class="wrap">
@@ -318,7 +333,8 @@
       <button class="burger" aria-label="Open menu" aria-expanded="false" id="burger">☰</button>
       <ul class="menu" id="menu">
         <li><a href="index.html#services">Services</a></li>
-        <li><a href="index.html#results">Results</a></li>
+        <li><a href="index.html#ai-search">AI Search</a></li>
+        <li><a href="index.html#results">Measurement</a></li>
         <li><a href="index.html#process">Process</a></li>
         <li><a href="index.html#packages">Packages</a></li>
         <li><a href="blog.html">Blog</a></li>
@@ -345,10 +361,10 @@
           </div>
         </div>
 
-        <div class="hero-card rv" aria-label="Newsletter sign-up">
+        <div class="hero-card rv" aria-label="Ask a question">
           <div class="mini">
-            <small>Weekly notes</small>
-            <span>1 minute read</span>
+            <small>Ask a question</small>
+            <span>via WhatsApp</span>
           </div>
           <form id="heroForm" novalidate>
             <div class="field">
@@ -360,8 +376,8 @@
               <input id="hero-email" type="email" name="email" required placeholder="you@company.com">
             </div>
             <div class="field">
-              <label for="hero-topic">I want insights on</label>
-              <select id="hero-topic" name="topic">
+              <label for="hero-topic">I need help with</label>
+              <select id="hero-topic" name="service">
                 <option>Meta Ads</option>
                 <option>Google Ads</option>
                 <option>AI Search</option>
@@ -369,9 +385,9 @@
               </select>
             </div>
             <input class="hp" type="text" name="company_website" tabindex="-1" autocomplete="off" aria-hidden="true">
-            <button class="btn btn-primary" type="submit">Join the newsletter</button>
+            <button class="btn btn-primary" type="submit">Send on WhatsApp</button>
             <div class="msg" role="status" aria-live="polite" style="min-height:1.2em;text-align:center;color:#5f6675;font-size:.9rem"></div>
-            <p class="fine">No spam, just useful notes and experiments worth tracking.</p>
+            <p class="fine">Submitting opens WhatsApp with your details filled in. No spam, no calls.</p>
           </form>
         </div>
       </div>
@@ -416,106 +432,53 @@
             <div class="featured-visual"></div>
             <div class="content">
               <span class="label">Featured</span>
-              <div class="meta">
-                <span>8 min read</span>
-                <span>•</span>
-                <span>Meta Ads</span>
-                <span>•</span>
-                <span>Founders</span>
-              </div>
-              <h3>What to fix before scaling your Facebook ads</h3>
-              <p>Most brands increase spend before fixing offer clarity, landing-page alignment and lead quality. Here’s the sequence that keeps growth sustainable.</p>
-              <a href="#" class="btn btn-primary">Read article</a>
+              <div class="meta"><span>AI Search</span><span>•</span><span>22 Oct 2026</span></div>
+              <h3>AEO and GEO explained: how to get your business named by ChatGPT and Google AI</h3>
+              <p>More people now ask AI for recommendations instead of scrolling Google. What AEO and GEO mean, what helps, and what is hype.</p>
+              <a href="/blog/what-is-aeo-and-geo-for-small-business.html" class="btn btn-primary">Read article</a>
             </div>
           </article>
-
           <div class="mini-stack">
-            <article class="mini-card rv">
-              <div class="meta"><span>AI Search</span><span>•</span><span>7 min</span></div>
-              <h4>Why your brand still feels invisible in AI answers</h4>
-              <p>Brand visibility is shifting from SERPs to answer engines. Here’s what to do now.</p>
-            </article>
-            <article class="mini-card rv">
-              <div class="meta"><span>Google Ads</span><span>•</span><span>5 min</span></div>
-              <h4>Clicks are up. Leads are flat. Here’s the real issue.</h4>
-              <p>Learn why intent mismatches and weak offer framing quietly kill campaign efficiency.</p>
-            </article>
+            <article class="mini-card rv"><div class="meta"><span>Lead Gen</span><span>•</span><span>21 Oct 2026</span></div><h3 style="font-size:1.1rem;margin-bottom:6px"><a href="/blog/what-is-a-good-cost-per-lead.html">What is a good cost per lead? How to judge your own numbers</a></h3><p>Stop comparing yourself to other people's numbers. A simple formula for the cost per lead your business can afford.</p></article>
+            <article class="mini-card rv"><div class="meta"><span>Meta Ads</span><span>•</span><span>7 Oct 2026</span></div><h3 style="font-size:1.1rem;margin-bottom:6px"><a href="/blog/5-meta-ads-mistakes-first-time-founders.html">5 Meta Ads mistakes that waste a first-time founder's budget</a></h3><p>Most first campaigns fail for the same five reasons. Avoid these and your first budget goes further.</p></article>
           </div>
-        </div>
-
-        <div class="stats-row">
-          <article class="stat-card rv">
-            <strong>30+</strong>
-            <span>Growth experiments tracked</span>
-          </article>
-          <article class="stat-card rv">
-            <strong>4x</strong>
-            <span>Higher relevance in AI discovery</span>
-          </article>
-          <article class="stat-card rv">
-            <strong>90%</strong>
-            <span>Content built around decisions, not vanity</span>
-          </article>
         </div>
 
         <div class="post-grid">
           <article class="post-card rv">
-            <div class="thumb"><span>Meta Ads</span></div>
-            <div class="content">
-              <div class="meta"><span>7 min read</span><span>•</span><span>Founders</span></div>
-              <h3>What to fix before scaling your Facebook ads</h3>
-              <p>Most brands chase bigger budgets before fixing the basics: offer clarity, landing page fit and lead quality.</p>
-              <a href="#">Read article →</a>
-            </div>
-          </article>
-
-          <article class="post-card rv">
-            <div class="thumb"><span>Google Ads</span></div>
-            <div class="content">
-              <div class="meta"><span>6 min read</span><span>•</span><span>Search</span></div>
-              <h3>Why your Google campaign is getting clicks but no leads</h3>
-              <p>Traffic is not the problem. Misalignment between intent, landing page and offer is where most campaigns stall.</p>
-              <a href="#">Read article →</a>
-            </div>
-          </article>
-
-          <article class="post-card rv">
             <div class="thumb"><span>AI Search</span></div>
             <div class="content">
-              <div class="meta"><span>8 min read</span><span>•</span><span>Visibility</span></div>
-              <h3>AI search is changing discovery — here’s what businesses should do</h3>
-              <p>Visibility in AI answers is no longer a “nice to have.” It’s becoming part of brand trust and discovery.</p>
-              <a href="#">Read article →</a>
+              <div class="meta"><span>22 Oct 2026</span></div>
+              <h3>AEO and GEO explained: how to get your business named by ChatGPT and Google AI</h3>
+              <p>More people now ask AI for recommendations instead of scrolling Google. What AEO and GEO mean, what helps, and what is hype.</p>
+              <a href="/blog/what-is-aeo-and-geo-for-small-business.html" aria-label="Read: AEO and GEO explained: how to get your business named by ChatGPT and Google AI">Read article →</a>
             </div>
           </article>
-
           <article class="post-card rv">
             <div class="thumb"><span>Lead Gen</span></div>
             <div class="content">
-              <div class="meta"><span>5 min read</span><span>•</span><span>Strategy</span></div>
-              <h3>One simple way to improve lead quality without lowering volume</h3>
-              <p>Better targeting, stronger framing and cleaner conversion paths create quality without slowing the funnel.</p>
-              <a href="#">Read article →</a>
+              <div class="meta"><span>21 Oct 2026</span></div>
+              <h3>What is a good cost per lead? How to judge your own numbers</h3>
+              <p>Stop comparing yourself to other people's numbers. A simple formula for the cost per lead your business can afford.</p>
+              <a href="/blog/what-is-a-good-cost-per-lead.html" aria-label="Read: What is a good cost per lead? How to judge your own numbers">Read article →</a>
             </div>
           </article>
-
           <article class="post-card rv">
-            <div class="thumb"><span>Landing Pages</span></div>
+            <div class="thumb"><span>Meta Ads</span></div>
             <div class="content">
-              <div class="meta"><span>4 min read</span><span>•</span><span>CRO</span></div>
-              <h3>Your landing page may be killing conversions before ads even work</h3>
-              <p>Most pages are visually okay but strategically weak. If the offer is unclear, your cost per lead rises.</p>
-              <a href="#">Read article →</a>
+              <div class="meta"><span>7 Oct 2026</span></div>
+              <h3>5 Meta Ads mistakes that waste a first-time founder's budget</h3>
+              <p>Most first campaigns fail for the same five reasons. Avoid these and your first budget goes further.</p>
+              <a href="/blog/5-meta-ads-mistakes-first-time-founders.html" aria-label="Read: 5 Meta Ads mistakes that waste a first-time founder's budget">Read article →</a>
             </div>
           </article>
-
           <article class="post-card rv">
-            <div class="thumb"><span>Reporting</span></div>
+            <div class="thumb"><span>Meta Ads</span></div>
             <div class="content">
-              <div class="meta"><span>6 min read</span><span>•</span><span>Ops</span></div>
-              <h3>Metrics that matter more than vanity CTRs and likes</h3>
-              <p>When the dashboard tells a clear story, budgets get better. When it doesn’t, strategy turns into guesswork.</p>
-              <a href="#">Read article →</a>
+              <div class="meta"><span>Checklist</span></div>
+              <h3>Meta Pixel setup checklist: track your leads before you spend a rupee</h3>
+              <p>Use this checklist to set up the Meta Pixel and know which ads bring leads.</p>
+              <a href="/blog/meta-pixel-setup-checklist.html" aria-label="Read: Meta Pixel setup checklist: track your leads before you spend a rupee">Read article →</a>
             </div>
           </article>
         </div>
@@ -529,10 +492,10 @@
           <h2>Browse by category</h2>
         </div>
         <div class="category-grid">
-          <div class="category-card rv"><strong>Meta Ads</strong><span class="chip">M</span></div>
-          <div class="category-card rv"><strong>Google Ads</strong><span class="chip">G</span></div>
-          <div class="category-card rv"><strong>AI Search</strong><span class="chip">AI</span></div>
-          <div class="category-card rv"><strong>Lead Gen</strong><span class="chip">L</span></div>
+          <a class="category-card rv" href="/blog/5-meta-ads-mistakes-first-time-founders.html"><strong>Meta Ads</strong><span class="chip" aria-hidden="true">M</span></a>
+          <a class="category-card rv" href="index.html#services"><strong>Google Ads</strong><span class="chip" aria-hidden="true">G</span></a>
+          <a class="category-card rv" href="/blog/what-is-aeo-and-geo-for-small-business.html"><strong>AI Search</strong><span class="chip" aria-hidden="true">AI</span></a>
+          <a class="category-card rv" href="/blog/what-is-a-good-cost-per-lead.html"><strong>Lead Gen</strong><span class="chip" aria-hidden="true">L</span></a>
         </div>
       </div>
     </section>
@@ -541,14 +504,11 @@
       <div class="wrap">
         <div class="newsletter rv">
           <div>
-            <span class="eyebrow">Newsletter</span>
-            <h2>Growth notes, sent with clarity.</h2>
-            <p>One useful note each week on performance marketing, AI visibility and what to test next.</p>
+            <span class="eyebrow">Stay updated</span>
+            <h2>Want the next guide when it is published?</h2>
+            <p>We have no email list yet. Message us on WhatsApp and we will send new guides as they go up.</p>
           </div>
-          <form id="newsletterForm" novalidate>
-            <input type="email" name="email" placeholder="Enter your email" required>
-            <button class="btn btn-primary" type="submit">Subscribe</button>
-          </form>
+          <a class="btn btn-primary" href="https://wa.me/919798948007?text=Hi%20Catalyst%20Ads%20Co.%2C%20please%20send%20me%20your%20next%20marketing%20guides." target="_blank" rel="noopener">Get new guides on WhatsApp</a>
         </div>
       </div>
     </section>
@@ -558,32 +518,31 @@
     <div class="wrap">
       <div class="foot">
         <div>
-          <div class="footer-logo" aria-label="Catalyst Ads Co. logo"></div>
+          <img class="footer-logo" src="/favicon-192x192.png" width="72" height="72" alt="Catalyst Ads Co. logo">
           <p>Performance marketing for growth-focused brands. Founder-led, transparent and built around lead quality.</p>
         </div>
         <div>
-          <h4>Explore</h4>
+          <h3 class="fh">Explore</h3>
           <ul>
             <li><a href="index.html#services">Services</a></li>
-            <li><a href="index.html#results">Results</a></li>
+            <li><a href="index.html#results">Measurement</a></li>
             <li><a href="index.html#packages">Packages</a></li>
             <li><a href="blog.html">Blog</a></li>
           </ul>
         </div>
         <div>
-          <h4>Topics</h4>
+          <h3 class="fh">Topics</h3>
           <ul>
-            <li><a href="#">Meta Ads</a></li>
-            <li><a href="#">Google Ads</a></li>
-            <li><a href="#">AI Search</a></li>
-            <li><a href="#">Lead Gen</a></li>
+            <li><a href="index.html#services">Meta &amp; Google Ads</a></li>
+            <li><a href="index.html#ai-search">AI Search</a></li>
+            <li><a href="/blog/what-is-a-good-cost-per-lead.html">Lead Gen</a></li>
           </ul>
         </div>
         <div>
-          <h4>Contact</h4>
+          <h3 class="fh">Contact</h3>
           <ul>
             <li><a href="mailto:Catalystadscompany@gmail.com">Catalystadscompany@gmail.com</a></li>
-            <li><a href="#">WhatsApp: +91 97989 48007</a></li>
+            <li><a href="https://wa.me/919798948007" target="_blank" rel="noopener">WhatsApp: +91 97989 48007</a></li>
           </ul>
         </div>
       </div>
@@ -612,39 +571,22 @@
 
       document.getElementById('yr').textContent = new Date().getFullYear();
 
-      function handleSubmit(form, successMessage) {
-        form.addEventListener('submit', function(e){
-          e.preventDefault();
-          var msg = form.querySelector('.msg') || form.querySelector('button');
-          var name = form.querySelector('[name="name"]');
-          var email = form.querySelector('[name="email"]');
-          if (email && !email.value.trim()) {
-            if (msg && msg.classList && msg.classList.contains('msg')) {
-              msg.textContent = 'Please enter a valid email.';
-              msg.style.color = '#ff6b35';
-            }
-            return;
-          }
-          if (name && !name.value.trim()) {
-            if (msg && msg.classList && msg.classList.contains('msg')) {
-              msg.textContent = 'Please add your name.';
-              msg.style.color = '#ff6b35';
-            }
-            return;
-          }
-          if (msg && msg.classList && msg.classList.contains('msg')) {
-            msg.style.color = '#1ebf7a';
-            msg.textContent = successMessage;
-          }
-          form.reset();
-        });
-      }
-
+      var WA='919798948007';
       var heroForm = document.getElementById('heroForm');
-      if (heroForm) handleSubmit(heroForm, 'Thanks! You are on the list.');
-
-      var newsletterForm = document.getElementById('newsletterForm');
-      if (newsletterForm) handleSubmit(newsletterForm, 'Subscribed successfully.');
+      if (heroForm) heroForm.addEventListener('submit', function(e){
+        e.preventDefault();
+        var msg = heroForm.querySelector('.msg'), d = new FormData(heroForm);
+        function say(t, ok){ msg.textContent = t; msg.style.color = ok ? '#0f7a4d' : '#b42318'; }
+        if (d.get('company_website')) return;
+        var name = (d.get('name')||'').trim(), email = (d.get('email')||'').trim();
+        if (!name) { say('Please add your name.', false); return; }
+        if (!/^\S+@\S+\.\S+$/.test(email)) { say('Please enter a valid email address.', false); return; }
+        var text = 'New question from the Catalyst Ads Co. blog\nName: '+name+'\nEmail: '+email+'\nHelp with: '+d.get('service');
+        var url = 'https://wa.me/'+WA+'?text='+encodeURIComponent(text);
+        say('Opening WhatsApp. Press send there to deliver your message.', true);
+        var w = window.open(url, '_blank', 'noopener'); if (!w) window.location.href = url;
+        heroForm.reset();
+      });
     })();
   </script>
 </body>
