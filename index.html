@@ -269,6 +269,41 @@
       .story-item{align-items:center;padding:20px 24px}.story-item h3{color:var(--ink);font-family:'Playfair Display',Georgia,serif;font-size:1.2rem;margin-bottom:4px}.story-item p{color:var(--muted);margin:0}.story-item .n{flex:none}
     .story-list{gap:16px}.story-wrap{gap:56px}.dark .story-copy p{margin-bottom:28px}
   .hc-badges span{display:inline-flex;align-items:center;gap:8px}.hc-badges span{padding:10px 16px}.hc-badges img{width:28px;height:28px;flex:none}
+
+.built{position:relative;overflow:hidden}
+.built-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:56px;align-items:center}
+.fphoto{position:relative;max-width:420px;margin:0 auto}
+.fphoto::before{content:"";position:absolute;inset:-6% -8% -8% -6%;background:conic-gradient(from 210deg,#ff6b35,#f5b751,#ff8a55,#ff6b35);border-radius:36px;filter:blur(38px);opacity:.38;z-index:0}
+.fphoto .frame{position:relative;z-index:1;border-radius:30px;overflow:hidden;transform:rotate(-2.2deg);box-shadow:0 2px 6px rgba(60,35,20,.1),0 40px 80px -24px rgba(204,71,16,.5);border:6px solid #fff;background:#111827;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.fphoto:hover .frame{transform:rotate(0)}
+.fphoto img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover}
+.fchip{position:absolute;z-index:2;background:rgba(255,255,255,.92);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-radius:16px;padding:10px 14px;font-size:.82rem;font-weight:700;box-shadow:0 14px 34px -10px rgba(17,24,39,.35);display:flex;align-items:center;gap:10px;animation:floaty 6s ease-in-out infinite}
+.fchip i{width:9px;height:9px;border-radius:50%;background:#1ebf7a;box-shadow:0 0 0 4px rgba(30,191,122,.2)}
+.fchip small{display:block;font-weight:600;color:var(--muted);font-size:.72rem}
+.fchip.a{left:-6%;bottom:12%}.fchip.b{right:-5%;top:9%;animation-delay:-3s}
+@keyframes floaty{50%{transform:translateY(-8px)}}
+.built h2{font-family:'Playfair Display',Georgia,serif;letter-spacing:-.04em;font-size:clamp(2.1rem,3.8vw,3.2rem);line-height:1.05;margin:0 0 14px}
+.built h2 em{font-style:italic;background:linear-gradient(90deg,#ff6b35,#f5a23a);-webkit-background-clip:text;background-clip:text;color:transparent}
+.built .lede{color:var(--muted);font-size:1.06rem;max-width:52ch;margin-bottom:26px}
+.proj-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.proj{display:flex;flex-direction:column;gap:12px;background:#fff;border-radius:22px;padding:20px;text-decoration:none;color:inherit;border:1px solid rgba(60,35,20,.07);box-shadow:inset 0 1px 0 #fff,0 1px 2px rgba(60,35,20,.06),0 4px 10px rgba(60,35,20,.05),0 18px 40px -12px rgba(60,35,20,.14);transition:transform .3s cubic-bezier(.2,.8,.2,1),box-shadow .3s ease}
+.proj:hover{transform:translateY(-6px)}
+.proj.g:hover{box-shadow:0 2px 4px rgba(60,35,20,.06),0 34px 70px -18px rgba(30,160,90,.45)}
+.proj.m:hover{box-shadow:0 2px 4px rgba(60,35,20,.06),0 34px 70px -18px rgba(225,48,108,.4)}
+.proj .top{display:flex;align-items:center;gap:12px}
+.proj .av{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;flex:none;color:#fff;font-weight:800}
+.proj.g .av{background:linear-gradient(135deg,#2fbf71,#128a4b)}
+.proj.m .av{background:linear-gradient(135deg,#1d2433,#ff6b35)}
+.proj .top b{display:block;line-height:1.2}.proj .top span{font-size:.8rem;color:var(--muted)}
+.proj p{font-size:.92rem;color:var(--muted);margin:0}
+.proj .stats{display:flex;gap:18px;border-top:1px solid rgba(60,35,20,.08);padding-top:12px;margin-top:auto}
+.proj .stats strong{display:block;font-size:1.25rem;letter-spacing:-.02em}
+.proj .stats span{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;font-weight:700}
+.proj .go{font-weight:800;font-size:.88rem;color:#b4410c;display:inline-flex;align-items:center;gap:6px}
+.built .snap{font-size:.78rem;color:var(--muted);margin-top:14px}
+@media(max-width:900px){.built-grid{grid-template-columns:1fr;gap:44px}.fphoto{max-width:340px}.fchip.a{left:-2%}.fchip.b{right:-2%}}
+@media(max-width:520px){.proj-grid{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.fchip{animation:none}}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "name": "Catalyst Ads Co.", "url": "https://catalystadsco.online/", "email": "Catalystadscompany@gmail.com", "description": "Bengaluru digital marketing agency offering performance marketing (Meta Ads, Google Ads, LinkedIn lead generation), landing page optimisation and AI search visibility (AEO/GEO).", "founder": {"@type": "Person", "name": "Ujjawal Kumar"}, "address": {"@type": "PostalAddress", "addressLocality": "Bengaluru", "addressCountry": "IN"}, "sameAs": ["https://www.instagram.com/catalystadsco/", "https://www.facebook.com/profile.php?id=61590844766527", "https://www.linkedin.com/company/catalyst-ads-co/"]}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "AI search visibility (AEO/GEO)", "serviceType": "Answer and generative engine optimization", "description": "Audit of how AI tools such as ChatGPT, Gemini, Perplexity and Google AI describe a business, followed by content, technical and business-information fixes. No ranking or citation is guaranteed.", "provider": {"@type": "ProfessionalService", "name": "Catalyst Ads Co.", "url": "https://catalystadsco.online/"}}</script>
@@ -389,6 +424,36 @@
           <div class="story-item"><div class="n">2</div><div><h3>Data-backed decisions</h3><p>We track spend, leads and cost per lead.</p></div></div>
           <div class="story-item"><div class="n">3</div><div><h3>Transparent goals</h3><p>Targets are agreed in writing before spend starts.</p></div></div>
           <div class="story-item"><div class="n">4</div><div><h3>Full-funnel thinking</h3><p>Ads, page, tracking and follow-up work together.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="built" class="light built">
+      <div class="wrap built-grid">
+        <div class="fphoto rv">
+          <div class="frame"><img src="/assets/founder.jpg" alt="Ujjawal 'Monk' Kumar, founder of Catalyst Ads Co." width="640" height="784" loading="lazy"></div>
+          <div class="fchip b"><i></i><div>Ujjawal &#39;Monk&#39; Kumar<small>Founder, Catalyst Ads Co.</small></div></div>
+          <div class="fchip a"><div>Bengaluru<small>You talk to the founder</small></div></div>
+        </div>
+        <div class="rv">
+          <span class="eyebrow">Founder-led</span>
+          <h2>We grow our <em>own pages</em> too.</h2>
+          <p class="lede">I run Catalyst Ads Co. myself. Before I run your ads, I build and grow my own. Here are two live pages you can open right now.</p>
+          <div class="proj-grid">
+            <a class="proj g" href="https://www.instagram.com/greenkart.in" target="_blank" rel="noopener">
+              <div class="top"><div class="av">GK</div><div><b>GreenKart</b><span>@greenkart.in</span></div></div>
+              <p>Fresh veggies for PGs in Bengaluru. Brand, reels and page set up from zero.</p>
+              <div class="stats"><div><strong>14.2K</strong><span>Top reel views</span></div><div><strong>210</strong><span>Followers</span></div></div>
+              <span class="go">View on Instagram &rarr;</span>
+            </a>
+            <a class="proj m" href="https://www.instagram.com/monk.stories" target="_blank" rel="noopener">
+              <div class="top"><div class="av">M</div><div><b>Monk Stories</b><span>@monk.stories</span></div></div>
+              <p>Short story-style reels, one frame at a time. My own creator page.</p>
+              <div class="stats"><div><strong>120K</strong><span>Top reel views</span></div><div><strong>124</strong><span>Followers</span></div></div>
+              <span class="go">View on Instagram &rarr;</span>
+            </a>
+          </div>
+          <p class="snap">Numbers from Instagram on 25 Oct 2026. Both pages are our own, not client work.</p>
         </div>
       </div>
     </section>
