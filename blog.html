@@ -22,7 +22,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
   <noscript><style>.rv{opacity:1!important;transform:none!important}
-    </style></noscript>
+    .bl-card[hidden],.bl-empty[hidden],#blEmpty[hidden]{display:none!important}
+</style></noscript>
   <style>
     :root{
       --bg:#f5f1ea;
@@ -381,7 +382,49 @@
     a{transition:color .25s ease,opacity .25s ease}
     @media(prefers-reduced-motion:reduce){body{animation:none}::view-transition-old(root),::view-transition-new(root){animation:none}}
       .dd-panel::before{content:"";position:absolute;left:0;right:0;top:-18px;height:18px}
+  
+    /* blog index */
+    .bl-head{padding:150px 0 28px;text-align:center;background:radial-gradient(800px 400px at 50% 0,rgba(255,107,53,.12),transparent 60%)}
+    .bl-head h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(2.3rem,5vw,4rem);letter-spacing:-.05em;line-height:1.02;max-width:820px;margin:10px auto 14px}
+    .bl-head p{color:var(--muted);font-size:1.1rem}
+    .bl-tools{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;align-items:center;margin-top:28px}
+    .bl-search input{width:min(340px,86vw);padding:13px 18px;border-radius:999px;border:1px solid var(--line);background:#fff;font-size:1rem;transition:border-color .25s,box-shadow .25s}
+    .bl-search input:focus{outline:none;border-color:rgba(255,107,53,.5);box-shadow:0 0 0 4px rgba(255,107,53,.1)}
+    .sr{position:absolute;left:-9999px}
+    .bl-chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+    .fchip{padding:10px 16px;border-radius:999px;border:1px solid var(--line);background:#fff;font-weight:700;cursor:pointer;color:var(--ink);transition:all .25s ease}
+    .fchip:hover{border-color:rgba(255,107,53,.5)}.fchip.on{background:#141821;color:#fff;border-color:#141821}
+    .bl-main{padding:36px 0 70px}
+    .bl-feat{display:grid;grid-template-columns:1.1fr 1fr;gap:0;background:#fff;border:1px solid var(--line);border-radius:28px;overflow:hidden;box-shadow:0 24px 54px rgba(17,24,39,.07)}
+    .bl-feat-vis,.bl-th{display:block}
+    .bl-feat-body{padding:38px;display:flex;flex-direction:column;gap:12px;justify-content:center;align-items:flex-start}
+    .bl-feat-body h2{font-family:'Playfair Display',Georgia,serif;font-size:clamp(1.6rem,2.6vw,2.3rem);letter-spacing:-.03em;line-height:1.12}
+    .bl-feat-body h2 a:hover,.bl-body h3 a:hover{color:#b4410c}
+    .bl-feat-body p{color:var(--muted)}
+    .bl-meta{display:flex;align-items:center;gap:10px;color:var(--muted);font-size:.85rem;font-weight:600;flex-wrap:wrap}
+    .bl-sub{font-family:'Playfair Display',Georgia,serif;font-size:1.7rem;margin:46px 0 18px;letter-spacing:-.03em}
+    .bl-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+    .bl-card{background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 14px 32px rgba(17,24,39,.04);transition:transform .35s ease,box-shadow .35s ease}
+    .bl-card:hover{transform:translateY(-6px);box-shadow:0 24px 46px rgba(17,24,39,.12)}
+    .bl-body{padding:22px;display:flex;flex-direction:column;gap:10px;flex:1}
+    .bl-body h3{font-size:1.18rem;line-height:1.3}.bl-body p{color:var(--muted);font-size:.96rem}
+    .bl-more{margin-top:auto;font-weight:800;color:#b4410c}
+    .bl-empty{text-align:center;color:var(--muted);padding:40px 0}
+    .th{position:relative;aspect-ratio:16/10;display:grid;place-items:center;overflow:hidden}
+    .bl-feat .th{height:100%;aspect-ratio:auto;min-height:300px}
+    .thtag{position:absolute;left:16px;top:16px;background:rgba(255,255,255,.92);color:#141821;font-size:.7rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:6px 11px;border-radius:999px}
+    .th .lg{display:flex;align-items:center;gap:14px;background:rgba(255,255,255,.92);padding:16px 22px;border-radius:20px;box-shadow:0 14px 30px rgba(17,24,39,.18);transition:transform .5s ease}
+    .bl-card:hover .th .lg,.bl-feat:hover .th .lg{transform:scale(1.07) rotate(-1.5deg)}
+    .t-ai{background:linear-gradient(135deg,#1b2436,#3a2a5a 55%,#ff6b35)}.t-lead{background:linear-gradient(135deg,#ffb27a,#ff6b35)}.t-meta{background:linear-gradient(135deg,#0d2b5e,#0467df 60%,#ff8a5c)}.t-pixel{background:linear-gradient(135deg,#101827,#0866ff 70%,#78b4ff)}
+    .bars{display:flex;align-items:flex-end;gap:5px;height:34px}.bars i{width:9px;border-radius:3px 3px 0 0;background:#ff6b35}.bars i:nth-child(1){height:40%}.bars i:nth-child(2){height:65%}.bars i:nth-child(3){height:55%}.bars i:nth-child(4){height:95%}
+    .bl-cta{padding:10px 0 90px}
+    .bl-cta-box{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:center;background:linear-gradient(135deg,#111827,#1d2432);color:#fff;border-radius:30px;padding:40px}
+    .bl-cta-box h2{font-family:'Playfair Display',Georgia,serif;font-size:clamp(1.7rem,3vw,2.4rem);letter-spacing:-.03em;margin:6px 0}.bl-cta-box p{color:rgba(255,255,255,.78)}.bl-cta-box .eyebrow{color:#ffc274}
+    .bl-cta-btns{display:flex;flex-wrap:wrap;gap:12px}
+    @media(max-width:980px){.bl-feat{grid-template-columns:1fr}.bl-feat .th{min-height:220px}.bl-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:640px){.bl-grid{grid-template-columns:1fr}.bl-head{padding-top:130px}.bl-feat-body{padding:26px}.bl-cta-box{padding:28px}}
   </style>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Blog", "name": "Catalyst Ads Co. Blog", "url": "https://catalystadsco.online/blog.html", "blogPost": [{"@type": "BlogPosting", "headline": "AEO and GEO explained: how to get your business named by ChatGPT and Google AI", "url": "https://catalystadsco.online/blog/what-is-aeo-and-geo-for-small-business.html", "datePublished": "2026-10-22"}, {"@type": "BlogPosting", "headline": "What is a good cost per lead? How to judge your own numbers", "url": "https://catalystadsco.online/blog/what-is-a-good-cost-per-lead.html", "datePublished": "2026-10-21"}, {"@type": "BlogPosting", "headline": "5 Meta Ads mistakes that waste a first-time founder's budget", "url": "https://catalystadsco.online/blog/5-meta-ads-mistakes-first-time-founders.html", "datePublished": "2026-10-07"}, {"@type": "BlogPosting", "headline": "Meta Pixel setup checklist: track your leads before you spend a rupee", "url": "https://catalystadsco.online/blog/meta-pixel-setup-checklist.html"}]}</script>
 </head>
 <body>
   <a class="skip" href="#articles">Skip to articles</a>
@@ -416,108 +459,54 @@
   </header>
 
   <main>
-    <section class="hero">
+    <section class="bl-head">
       <div class="wrap">
-        <div class="hero-copy rv">
-          <div class="pill"><b></b> Practical growth insights</div>
-          <h1>Simple guides for <em>better growth</em>.</h1>
-          <p class="lead">Simple guides on Meta Ads, Google Ads and AI search.</p>
-          <div class="cta-row">
-            <a href="index.html#contact" class="btn btn-primary">Get a free audit</a>
-            <a href="#articles" class="btn btn-secondary">Read the latest</a>
-          </div>
-          <div class="ticks">
-            <span>Founder-led</span>
-            <span>Practical advice</span>
-            <span>No fluff</span>
-          </div>
-        </div>
-
-        <div class="hero-card rv" aria-label="Ask a question">
-          <div class="mini">
-            <small>Ask a question</small>
-            <span>via WhatsApp</span>
-          </div>
-          <form id="heroForm" novalidate>
-            <div class="field">
-              <label for="hero-name">Your name</label>
-              <input id="hero-name" name="name" required placeholder="Full name">
-            </div>
-            <div class="field">
-              <label for="hero-email">Email</label>
-              <input id="hero-email" type="email" name="email" required placeholder="you@company.com">
-            </div>
-            <div class="field">
-              <label for="hero-topic">I need help with</label>
-              <select id="hero-topic" name="service">
-                <option>Meta Ads</option>
-                <option>Google Ads</option>
-                <option>AI Search</option>
-                <option>Lead generation</option>
-              </select>
-            </div>
-            <input class="hp" type="text" name="company_website" tabindex="-1" autocomplete="off" aria-hidden="true">
-            <button class="btn btn-primary" type="submit">Send on WhatsApp</button>
-            <div class="msg" role="status" aria-live="polite" style="min-height:1.2em;text-align:center;color:#5f6675;font-size:.9rem"></div>
-            <p class="fine">Submitting opens WhatsApp with your details filled in. No spam, no calls.</p>
-          </form>
+        <span class="eyebrow">Blog</span>
+        <h1>Marketing guides for growing businesses</h1>
+        <p>Simple, practical guides on Meta Ads, Google Ads and AI search.</p>
+        <div class="bl-tools">
+          <div class="bl-search"><label class="sr" for="blSearch">Search articles</label><input id="blSearch" type="search" placeholder="Search articles" autocomplete="off"></div>
+          <div class="bl-chips" role="group" aria-label="Filter by topic"><button type="button" class="fchip on" data-f="All" aria-pressed="true">All</button><button type="button" class="fchip" data-f="AI Search" aria-pressed="false">AI Search</button><button type="button" class="fchip" data-f="Lead Gen" aria-pressed="false">Lead Gen</button><button type="button" class="fchip" data-f="Meta Ads" aria-pressed="false">Meta Ads</button></div>
         </div>
       </div>
     </section>
 
-        <section id="articles" class="light">
+    <section id="articles" class="bl-main">
       <div class="wrap">
-        <div class="section-head rv">
-          <span class="eyebrow">Latest reads</span>
-          <h2>Latest guides</h2>
-        </div>
-
-        <div class="post-grid">
-          <article class="post-card rv">
-            <div class="content">
-              <div class="meta"><span class="ptag">AI Search</span><span>22 Oct 2026</span></div>
-              <h3>AEO and GEO explained: how to get your business named by ChatGPT and Google AI</h3>
-              <p>What AEO and GEO mean and what actually helps.</p>
-              <a href="/blog/what-is-aeo-and-geo-for-small-business.html" aria-label="Read: AEO and GEO explained: how to get your business named by ChatGPT and Google AI">Read article →</a>
-            </div>
+        <article class="bl-feat">
+          <a class="bl-feat-vis" href="/blog/what-is-aeo-and-geo-for-small-business.html" tabindex="-1" aria-hidden="true"><div class="th t-ai" aria-hidden="true"><span class="thtag">AI Search</span><div class="lg"><img src="/assets/logos/chatgpt.svg" alt="" width="34" height="34" loading="lazy"><img src="/assets/logos/gemini.svg" alt="" width="34" height="34" loading="lazy"><img src="/assets/logos/perplexity.svg" alt="" width="34" height="34" loading="lazy"></div></div></a>
+          <div class="bl-feat-body">
+            <span class="eyebrow">Featured</span>
+            <div class="bl-meta"><span class="ptag">AI Search</span><span>22 Oct 2026</span></div>
+            <h2><a href="/blog/what-is-aeo-and-geo-for-small-business.html">AEO and GEO explained: how to get your business named by ChatGPT and Google AI</a></h2>
+            <p>What AEO and GEO mean, what actually helps, and what is just hype.</p>
+            <a class="btn btn-primary" href="/blog/what-is-aeo-and-geo-for-small-business.html">Read article &rarr;</a>
+          </div>
+        </article>
+        <h2 class="bl-sub">More articles</h2>
+        <div class="bl-grid" id="blGrid">
+          <article class="bl-card" data-cat="Lead Gen" data-text="what is a good cost per lead? how to judge your own numbers a simple way to work out the cost per lead your business can afford.">
+            <a class="bl-th" href="/blog/what-is-a-good-cost-per-lead.html" tabindex="-1" aria-hidden="true"><div class="th t-lead" aria-hidden="true"><span class="thtag">Lead Gen</span><div class="lg"><span class="bars"><i></i><i></i><i></i><i></i></span></div></div></a>
+            <div class="bl-body"><div class="bl-meta"><span class="ptag">Lead Gen</span><span>21 Oct 2026</span></div><h3><a href="/blog/what-is-a-good-cost-per-lead.html">What is a good cost per lead? How to judge your own numbers</a></h3><p>A simple way to work out the cost per lead your business can afford.</p><a class="bl-more" href="/blog/what-is-a-good-cost-per-lead.html" aria-label="Read: What is a good cost per lead? How to judge your own numbers">Read article &rarr;</a></div>
           </article>
-          <article class="post-card rv">
-            <div class="content">
-              <div class="meta"><span class="ptag">Lead Gen</span><span>21 Oct 2026</span></div>
-              <h3>What is a good cost per lead? How to judge your own numbers</h3>
-              <p>A simple way to work out your own cost per lead.</p>
-              <a href="/blog/what-is-a-good-cost-per-lead.html" aria-label="Read: What is a good cost per lead? How to judge your own numbers">Read article →</a>
-            </div>
+          <article class="bl-card" data-cat="Meta Ads" data-text="5 meta ads mistakes that waste a first-time founder&#x27;s budget most first campaigns fail for the same five reasons. avoid these and your first budget goes further.">
+            <a class="bl-th" href="/blog/5-meta-ads-mistakes-first-time-founders.html" tabindex="-1" aria-hidden="true"><div class="th t-meta" aria-hidden="true"><span class="thtag">Meta Ads</span><div class="lg"><img src="/assets/logos/meta.svg" alt="" width="34" height="34" loading="lazy"><img src="/assets/logos/instagram.svg" alt="" width="34" height="34" loading="lazy"></div></div></a>
+            <div class="bl-body"><div class="bl-meta"><span class="ptag">Meta Ads</span><span>7 Oct 2026</span></div><h3><a href="/blog/5-meta-ads-mistakes-first-time-founders.html">5 Meta Ads mistakes that waste a first-time founder's budget</a></h3><p>Most first campaigns fail for the same five reasons. Avoid these and your first budget goes further.</p><a class="bl-more" href="/blog/5-meta-ads-mistakes-first-time-founders.html" aria-label="Read: 5 Meta Ads mistakes that waste a first-time founder&#x27;s budget">Read article &rarr;</a></div>
           </article>
-          <article class="post-card rv">
-            <div class="content">
-              <div class="meta"><span class="ptag">Meta Ads</span><span>7 Oct 2026</span></div>
-              <h3>5 Meta Ads mistakes that waste a first-time founder's budget</h3>
-              <p>Avoid these and your first budget goes further.</p>
-              <a href="/blog/5-meta-ads-mistakes-first-time-founders.html" aria-label="Read: 5 Meta Ads mistakes that waste a first-time founder's budget">Read article →</a>
-            </div>
-          </article>
-          <article class="post-card rv">
-            <div class="content">
-              <div class="meta"><span class="ptag">Meta Ads</span><span>Checklist</span></div>
-              <h3>Meta Pixel setup checklist: track your leads before you spend a rupee</h3>
-              <p>A checklist to track which ads bring leads.</p>
-              <a href="/blog/meta-pixel-setup-checklist.html" aria-label="Read: Meta Pixel setup checklist: track your leads before you spend a rupee">Read article →</a>
-            </div>
+          <article class="bl-card" data-cat="Meta Ads" data-text="meta pixel setup checklist: track your leads before you spend a rupee a checklist to set up the meta pixel and know which ads bring leads.">
+            <a class="bl-th" href="/blog/meta-pixel-setup-checklist.html" tabindex="-1" aria-hidden="true"><div class="th t-pixel" aria-hidden="true"><span class="thtag">Meta Ads</span><div class="lg"><img src="/assets/logos/meta.svg" alt="" width="34" height="34" loading="lazy"><img src="/assets/logos/facebook.svg" alt="" width="34" height="34" loading="lazy"></div></div></a>
+            <div class="bl-body"><div class="bl-meta"><span class="ptag">Meta Ads</span><span>Checklist</span></div><h3><a href="/blog/meta-pixel-setup-checklist.html">Meta Pixel setup checklist: track your leads before you spend a rupee</a></h3><p>A checklist to set up the Meta Pixel and know which ads bring leads.</p><a class="bl-more" href="/blog/meta-pixel-setup-checklist.html" aria-label="Read: Meta Pixel setup checklist: track your leads before you spend a rupee">Read article &rarr;</a></div>
           </article>
         </div>
+        <p class="bl-empty" id="blEmpty" hidden>No articles match your search.</p>
       </div>
     </section>
 
-        <section class="light">
+    <section class="bl-cta">
       <div class="wrap">
-        <div class="newsletter rv">
-          <div>
-            <span class="eyebrow">Stay updated</span>
-            <h2>Want the next guide when it is published?</h2>
-            <p>Message us on WhatsApp and we will send new guides.</p>
-          </div>
-          <a class="btn btn-primary" href="https://wa.me/919798948007?text=Hi%20Catalyst%20Ads%20Co.%2C%20please%20send%20me%20your%20next%20marketing%20guides." target="_blank" rel="noopener">Get new guides on WhatsApp</a>
+        <div class="bl-cta-box">
+          <div><span class="eyebrow">Need a hand?</span><h2>Want help with your ads?</h2><p>Get a free audit. We tell you what works and what to fix.</p></div>
+          <div class="bl-cta-btns"><a class="btn btn-primary" href="/index.html#contact">Get a free audit</a><a class="btn btn-ghost" href="https://wa.me/919798948007?text=Hi%20Catalyst%20Ads%20Co.%2C%20please%20send%20me%20your%20next%20marketing%20guides." target="_blank" rel="noopener">New guides on WhatsApp</a></div>
         </div>
       </div>
     </section>
@@ -626,5 +615,13 @@
 })();
 </script>
   <script>(function(){var h=document.getElementById("siteHeader");if(!h)return;function f(){h.classList.toggle("scrolled",window.scrollY>40)}f();window.addEventListener("scroll",f,{passive:true})})();</script>
+  <script>
+(function(){
+  var q=document.getElementById('blSearch'),cards=[].slice.call(document.querySelectorAll('.bl-card')),chips=[].slice.call(document.querySelectorAll('.fchip')),empty=document.getElementById('blEmpty'),cat='All';
+  function run(){var t=(q.value||'').toLowerCase().trim(),n=0;cards.forEach(function(c){var ok=(cat==='All'||c.dataset.cat===cat)&&(!t||c.dataset.text.indexOf(t)>-1);c.hidden=!ok;if(ok)n++});empty.hidden=n>0}
+  if(q)q.addEventListener('input',run);
+  chips.forEach(function(b){b.addEventListener('click',function(){cat=b.dataset.f;chips.forEach(function(x){var on=x===b;x.classList.toggle('on',on);x.setAttribute('aria-pressed',on?'true':'false')});run()})});
+})();
+</script>
 </body>
 </html>
