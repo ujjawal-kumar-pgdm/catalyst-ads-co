@@ -346,6 +346,12 @@
     }
     .pillnav a:focus-visible,.pillnav button:focus-visible{outline:3px solid #141821;outline-offset:2px}
       main[id],section[id]{scroll-margin-top:104px}
+      header.pillnav{height:0;padding:0;overflow:visible;display:flow-root}.pill-wrap{margin-top:14px}
+    main>.hero{padding-top:96px}
+    .ptag{display:inline-flex;padding:5px 11px;border-radius:999px;background:rgba(17,24,39,.06);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;font-weight:800;color:#141821}
+    .post-card .meta{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+    .post-grid{grid-template-columns:repeat(2,minmax(0,1fr))}@media(max-width:700px){.post-grid{grid-template-columns:1fr}}
+    .post-card .content{padding:26px}
   </style>
 </head>
 <body>
@@ -437,89 +443,41 @@
       </div>
     </section>
 
-    <section class="soft">
-      <div class="wrap">
-        <div class="section-head rv">
-          <span class="eyebrow">Why this blog</span>
-          <h2>Clear thinking for growth decisions.</h2>
-          <p>Most marketing content is either generic fluff or overcomplicated jargon. We keep it practical, direct and tied to the decisions business owners actually have to make.</p>
-        </div>
-        <div class="feature-grid">
-          <article class="feature-card rv">
-            <div class="icon">A</div>
-            <h3>Actionable frameworks</h3>
-            <p>Simple systems and prompts you can use to test offers, refine funnels and improve decision-making without adding more chaos.</p>
-          </article>
-          <article class="feature-card rv">
-            <div class="icon">R</div>
-            <h3>Real campaign thinking</h3>
-            <p>Lessons from lead-gen performance work, not classroom theory. We focus on what actually moves pipeline and revenue.</p>
-          </article>
-          <article class="feature-card rv">
-            <div class="icon">S</div>
-            <h3>AI + performance mix</h3>
-            <p>How brands show up in AI-powered search, how trust signals work, and where paid growth still matters.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="articles" class="light">
+        <section id="articles" class="light">
       <div class="wrap">
         <div class="section-head rv">
           <span class="eyebrow">Latest reads</span>
           <h2>Build smarter campaigns, not busier ones.</h2>
         </div>
 
-        <div class="feature-spotlight">
-          <article class="featured-post rv">
-            <div class="featured-visual"></div>
-            <div class="content">
-              <span class="label">Featured</span>
-              <div class="meta"><span>AI Search</span><span>•</span><span>22 Oct 2026</span></div>
-              <h3>AEO and GEO explained: how to get your business named by ChatGPT and Google AI</h3>
-              <p>More people now ask AI for recommendations instead of scrolling Google. What AEO and GEO mean, what helps, and what is hype.</p>
-              <a href="/blog/what-is-aeo-and-geo-for-small-business.html" class="btn btn-primary">Read article</a>
-            </div>
-          </article>
-          <div class="mini-stack">
-            <article class="mini-card rv"><div class="meta"><span>Lead Gen</span><span>•</span><span>21 Oct 2026</span></div><h3 style="font-size:1.1rem;margin-bottom:6px"><a href="/blog/what-is-a-good-cost-per-lead.html">What is a good cost per lead? How to judge your own numbers</a></h3><p>Stop comparing yourself to other people's numbers. A simple formula for the cost per lead your business can afford.</p></article>
-            <article class="mini-card rv"><div class="meta"><span>Meta Ads</span><span>•</span><span>7 Oct 2026</span></div><h3 style="font-size:1.1rem;margin-bottom:6px"><a href="/blog/5-meta-ads-mistakes-first-time-founders.html">5 Meta Ads mistakes that waste a first-time founder's budget</a></h3><p>Most first campaigns fail for the same five reasons. Avoid these and your first budget goes further.</p></article>
-          </div>
-        </div>
-
         <div class="post-grid">
           <article class="post-card rv">
-            <div class="thumb"><span>AI Search</span></div>
             <div class="content">
-              <div class="meta"><span>22 Oct 2026</span></div>
+              <div class="meta"><span class="ptag">AI Search</span><span>22 Oct 2026</span></div>
               <h3>AEO and GEO explained: how to get your business named by ChatGPT and Google AI</h3>
               <p>More people now ask AI for recommendations instead of scrolling Google. What AEO and GEO mean, what helps, and what is hype.</p>
               <a href="/blog/what-is-aeo-and-geo-for-small-business.html" aria-label="Read: AEO and GEO explained: how to get your business named by ChatGPT and Google AI">Read article →</a>
             </div>
           </article>
           <article class="post-card rv">
-            <div class="thumb"><span>Lead Gen</span></div>
             <div class="content">
-              <div class="meta"><span>21 Oct 2026</span></div>
+              <div class="meta"><span class="ptag">Lead Gen</span><span>21 Oct 2026</span></div>
               <h3>What is a good cost per lead? How to judge your own numbers</h3>
               <p>Stop comparing yourself to other people's numbers. A simple formula for the cost per lead your business can afford.</p>
               <a href="/blog/what-is-a-good-cost-per-lead.html" aria-label="Read: What is a good cost per lead? How to judge your own numbers">Read article →</a>
             </div>
           </article>
           <article class="post-card rv">
-            <div class="thumb"><span>Meta Ads</span></div>
             <div class="content">
-              <div class="meta"><span>7 Oct 2026</span></div>
+              <div class="meta"><span class="ptag">Meta Ads</span><span>7 Oct 2026</span></div>
               <h3>5 Meta Ads mistakes that waste a first-time founder's budget</h3>
               <p>Most first campaigns fail for the same five reasons. Avoid these and your first budget goes further.</p>
               <a href="/blog/5-meta-ads-mistakes-first-time-founders.html" aria-label="Read: 5 Meta Ads mistakes that waste a first-time founder's budget">Read article →</a>
             </div>
           </article>
           <article class="post-card rv">
-            <div class="thumb"><span>Meta Ads</span></div>
             <div class="content">
-              <div class="meta"><span>Checklist</span></div>
+              <div class="meta"><span class="ptag">Meta Ads</span><span>Checklist</span></div>
               <h3>Meta Pixel setup checklist: track your leads before you spend a rupee</h3>
               <p>Use this checklist to set up the Meta Pixel and know which ads bring leads.</p>
               <a href="/blog/meta-pixel-setup-checklist.html" aria-label="Read: Meta Pixel setup checklist: track your leads before you spend a rupee">Read article →</a>
@@ -529,22 +487,7 @@
       </div>
     </section>
 
-    <section class="soft">
-      <div class="wrap">
-        <div class="section-head rv">
-          <span class="eyebrow">Topics</span>
-          <h2>Browse by category</h2>
-        </div>
-        <div class="category-grid">
-          <a class="category-card rv" href="/blog/5-meta-ads-mistakes-first-time-founders.html"><strong>Meta Ads</strong><span class="chip" aria-hidden="true">M</span></a>
-          <a class="category-card rv" href="index.html#services"><strong>Google Ads</strong><span class="chip" aria-hidden="true">G</span></a>
-          <a class="category-card rv" href="/blog/what-is-aeo-and-geo-for-small-business.html"><strong>AI Search</strong><span class="chip" aria-hidden="true">AI</span></a>
-          <a class="category-card rv" href="/blog/what-is-a-good-cost-per-lead.html"><strong>Lead Gen</strong><span class="chip" aria-hidden="true">L</span></a>
-        </div>
-      </div>
-    </section>
-
-    <section class="light">
+        <section class="light">
       <div class="wrap">
         <div class="newsletter rv">
           <div>
