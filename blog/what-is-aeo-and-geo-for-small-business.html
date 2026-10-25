@@ -391,6 +391,7 @@
     header.pillnav.scrolled .pill-wrap{min-height:62px;box-shadow:0 10px 30px rgba(17,24,39,.16)}
     a{transition:color .25s ease,opacity .25s ease}
     @media(prefers-reduced-motion:reduce){body{animation:none}::view-transition-old(root),::view-transition-new(root){animation:none}}
+      .dd-panel::before{content:"";position:absolute;left:0;right:0;top:-18px;height:18px}
   </style>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "AEO and GEO explained: how to get your business named by ChatGPT and Google AI", "datePublished": "2026-10-22", "dateModified": "2026-10-22", "description": "More people now ask AI for recommendations instead of scrolling Google. Here is what AEO and GEO mean, what actually helps, and what is just hype.", "author": {"@type": "Person", "name": "Ujjawal Kumar"}, "publisher": {"@type": "Organization", "name": "Catalyst Ads Co.", "url": "https://catalystadsco.online"}, "mainEntityOfPage": "https://catalystadsco.online/blog/what-is-aeo-and-geo-for-small-business.html", "image": "https://images.unsplash.com/photo-1686061592689-312bbfb5c055?auto=format&fit=crop&w=1400&q=70"}</script>
 </head>
@@ -508,7 +509,7 @@
   function closeAll(except){dds.forEach(function(d){if(d!==except){d.classList.remove('open');d.querySelector('.dd-btn').setAttribute('aria-expanded','false')}})}
   dds.forEach(function(d){var b=d.querySelector('.dd-btn');
     b.addEventListener('click',function(e){e.stopPropagation();var hov=window.matchMedia('(hover:hover) and (min-width:1021px)').matches;var o=hov?true:!d.classList.contains('open');closeAll(d);d.classList.toggle('open',o);b.setAttribute('aria-expanded',o?'true':'false')});
-    if(window.matchMedia('(hover:hover) and (min-width:1021px)').matches){d.addEventListener('mouseenter',function(){closeAll(d);d.classList.add('open');b.setAttribute('aria-expanded','true')});d.addEventListener('mouseleave',function(){d.classList.remove('open');b.setAttribute('aria-expanded','false')})}
+    if(window.matchMedia('(hover:hover) and (min-width:1021px)').matches){var t;d.addEventListener('mouseenter',function(){clearTimeout(t);closeAll(d);d.classList.add('open');b.setAttribute('aria-expanded','true')});d.addEventListener('mouseleave',function(){t=setTimeout(function(){d.classList.remove('open');b.setAttribute('aria-expanded','false')},250)})}
   });
   document.addEventListener('click',function(e){if(!hd.contains(e.target))closeAll()});
   document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeAll();var m=document.getElementById('menu');if(m)m.classList.remove('open')}});

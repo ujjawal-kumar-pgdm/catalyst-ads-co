@@ -266,6 +266,7 @@
     .calc-note{text-align:center;color:var(--muted);font-size:.85rem;margin-top:16px}
     @media(max-width:820px){.calc{grid-template-columns:1fr}}
       .pv1 .boost,.sv5 .cta,.sv4 .chip{background:#cc4710}.sv5 .ok{background:#0f7a4d}.sv3 .n2{background:#cc4710}
+      .dd-panel::before{content:"";position:absolute;left:0;right:0;top:-18px;height:18px}
   </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "name": "Catalyst Ads Co.", "url": "https://catalystadsco.online/", "email": "Catalystadscompany@gmail.com", "description": "Bengaluru digital marketing agency offering performance marketing (Meta Ads, Google Ads, LinkedIn lead generation), landing page optimisation and AI search visibility (AEO/GEO).", "founder": {"@type": "Person", "name": "Ujjawal Kumar"}, "address": {"@type": "PostalAddress", "addressLocality": "Bengaluru", "addressCountry": "IN"}, "sameAs": ["https://www.instagram.com/catalystadsco/", "https://www.facebook.com/profile.php?id=61590844766527", "https://www.linkedin.com/company/catalyst-ads-co/"]}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "AI search visibility (AEO/GEO)", "serviceType": "Answer and generative engine optimization", "description": "Audit of how AI tools such as ChatGPT, Gemini, Perplexity and Google AI describe a business, followed by content, technical and business-information fixes. No ranking or citation is guaranteed.", "provider": {"@type": "ProfessionalService", "name": "Catalyst Ads Co.", "url": "https://catalystadsco.online/"}}</script>
@@ -648,7 +649,7 @@
   function closeAll(except){dds.forEach(function(d){if(d!==except){d.classList.remove('open');d.querySelector('.dd-btn').setAttribute('aria-expanded','false')}})}
   dds.forEach(function(d){var b=d.querySelector('.dd-btn');
     b.addEventListener('click',function(e){e.stopPropagation();var hov=window.matchMedia('(hover:hover) and (min-width:1021px)').matches;var o=hov?true:!d.classList.contains('open');closeAll(d);d.classList.toggle('open',o);b.setAttribute('aria-expanded',o?'true':'false')});
-    if(window.matchMedia('(hover:hover) and (min-width:1021px)').matches){d.addEventListener('mouseenter',function(){closeAll(d);d.classList.add('open');b.setAttribute('aria-expanded','true')});d.addEventListener('mouseleave',function(){d.classList.remove('open');b.setAttribute('aria-expanded','false')})}
+    if(window.matchMedia('(hover:hover) and (min-width:1021px)').matches){var t;d.addEventListener('mouseenter',function(){clearTimeout(t);closeAll(d);d.classList.add('open');b.setAttribute('aria-expanded','true')});d.addEventListener('mouseleave',function(){t=setTimeout(function(){d.classList.remove('open');b.setAttribute('aria-expanded','false')},250)})}
   });
   document.addEventListener('click',function(e){if(!hd.contains(e.target))closeAll()});
   document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeAll();var m=document.getElementById('menu');if(m)m.classList.remove('open')}});
