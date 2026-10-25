@@ -511,11 +511,11 @@
       <div class="wrap">
         <div class="resource-wrap">
           <div>
-            <span class="eyebrow">Free to learn</span>
+            <span class="eyebrow">Ebook</span>
             <h2>Meta Ads for First-Time Founders</h2>
             <p>A simple guide to launching your first campaign.</p>
             <div class="cta-row">
-              <a href="https://wa.me/919798948007?text=Hi%20Catalyst%20Ads%20Co.%2C%20I%27d%20like%20the%20Meta%20Ads%20for%20First-Time%20Founders%20guide." class="btn btn-primary" target="_blank" rel="noopener">Get the ebook →</a>
+              <a href="https://ujjawal7.gumroad.com/l/qdkjxe" class="btn btn-primary" target="_blank" rel="noopener">Get the ebook →</a>
               <a href="blog.html" class="btn btn-secondary">Read the blog</a>
             </div>
           </div>
@@ -639,8 +639,11 @@
           var lines = [heading];
           Object.keys(labels).forEach(function(k){ var v = (d.get(k) || '').toString().trim(); if (v) lines.push(labels[k] + ': ' + v); });
           var url = 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(lines.join('\n'));
-          say('Opening WhatsApp. Press send there to deliver your request.', true);
+          say('Request sent to our inbox. WhatsApp is opening too, press send there so we can reply faster.', true);
           var w = window.open(url, '_blank', 'noopener');
+          var payload = {}; d.forEach(function(v,k){ if (k !== 'company_website') payload[k] = v; });
+          payload._subject = heading;
+          fetch('https://formspree.io/f/mzeednwp', {method:'POST', headers:{'Content-Type':'application/json','Accept':'application/json'}, body: JSON.stringify(payload), keepalive:true}).catch(function(){});
           if (!w) { window.location.href = url; }
           form.reset();
         });
