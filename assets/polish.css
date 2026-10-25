@@ -71,3 +71,9 @@ header.pillnav .pill-wrap{
 }
 
 @media (prefers-reduced-motion:reduce){.svc:hover,.bl-card:hover,.btn-primary:hover{transform:none}}
+
+/* Section rhythm: every content section gets breathing room so cards never touch the next band */
+section:not(.hero):not(.dark):not(.final-cta){padding-top:88px;padding-bottom:88px}
+@media(max-width:700px){section:not(.hero):not(.dark):not(.final-cta){padding-top:60px;padding-bottom:60px}}
+/* Hero cards on phones: let each card be as tall as its content so nothing is clipped */
+@media(max-width:520px){.c1{min-height:300px}.c2,.c3,.c4,.c5{min-height:0}.hc-card{padding:22px}}
