@@ -371,6 +371,15 @@
     .btn:hover,a.pcta:hover{transform:translateY(-2px)}
     .dd-panel{animation:ddIn .22s ease both}@keyframes ddIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.marquee-track{animation:none;flex-wrap:wrap;width:auto;justify-content:center}.marquee-group[aria-hidden]{display:none}.js .rv{opacity:1!important;transform:none!important;transition:none}*{transition-duration:.01ms!important}}
+  
+    @view-transition{navigation:auto}
+    ::view-transition-old(root){animation:vtOut .25s ease both}::view-transition-new(root){animation:vtIn .45s ease both}
+    @keyframes vtOut{to{opacity:0}}@keyframes vtIn{from{opacity:0;transform:translateY(10px)}}
+    body{animation:pageIn .6s ease both}@keyframes pageIn{from{opacity:0}}
+    .pill-wrap{transition:box-shadow .35s ease,min-height .35s ease}
+    header.pillnav.scrolled .pill-wrap{min-height:62px;box-shadow:0 10px 30px rgba(17,24,39,.16)}
+    a{transition:color .25s ease,opacity .25s ease}
+    @media(prefers-reduced-motion:reduce){body{animation:none}::view-transition-old(root),::view-transition-new(root){animation:none}}
   </style>
 </head>
 <body>
@@ -622,5 +631,6 @@
   setTimeout(function(){els.forEach(function(e){e.classList.add('in')})},6000);
 })();
 </script>
+  <script>(function(){var h=document.getElementById("siteHeader");if(!h)return;function f(){h.classList.toggle("scrolled",window.scrollY>40)}f();window.addEventListener("scroll",f,{passive:true})})();</script>
 </body>
 </html>
