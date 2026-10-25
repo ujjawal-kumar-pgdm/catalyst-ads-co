@@ -1,0 +1,73 @@
+/* Catalyst polish layer: depth, colour, type. Loaded last so it refines the base styles. */
+:root{
+  --sh-1:0 1px 2px rgba(60,35,20,.06),0 4px 10px rgba(60,35,20,.05),0 18px 40px -12px rgba(60,35,20,.14);
+  --sh-2:0 2px 4px rgba(60,35,20,.06),0 12px 24px rgba(255,107,53,.08),0 34px 70px -18px rgba(204,71,16,.22);
+  --glow:0 10px 24px -6px rgba(255,107,53,.55),0 24px 48px -12px rgba(255,107,53,.38);
+}
+html{background:#f5f1ea}
+body{
+  background:
+    radial-gradient(900px 520px at 85% -8%,rgba(255,138,82,.20),transparent 60%),
+    radial-gradient(760px 480px at -6% 12%,rgba(245,183,81,.18),transparent 62%),
+    radial-gradient(900px 600px at 50% 105%,rgba(255,107,53,.10),transparent 60%),
+    #f5f1ea;
+  background-attachment:fixed;
+}
+::selection{background:#ff6b35;color:#fff}
+:focus-visible{outline:3px solid rgba(255,107,53,.55);outline-offset:3px;border-radius:8px}
+
+/* Type */
+h1,h2,h3{text-wrap:balance;letter-spacing:-.022em}
+h1{line-height:1.04}
+h2{line-height:1.1}
+p,li{text-wrap:pretty}
+body{font-feature-settings:"kern","liga","calt";letter-spacing:-.003em}
+
+/* Buttons */
+.btn{transition:transform .2s cubic-bezier(.2,.8,.2,1),box-shadow .25s ease,filter .2s ease}
+.btn-primary,.pcta,.bl-cta .btn-primary{
+  background:linear-gradient(180deg,#ff8a55 0%,#ff6b35 55%,#f25a22 100%)!important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.35),inset 0 -2px 0 rgba(160,50,10,.25),var(--glow);
+}
+.btn-primary:hover{transform:translateY(-2px);filter:saturate(1.08);box-shadow:inset 0 1px 0 rgba(255,255,255,.4),inset 0 -2px 0 rgba(160,50,10,.25),0 14px 28px -6px rgba(255,107,53,.62),0 32px 60px -14px rgba(255,107,53,.45)}
+.btn-primary:active{transform:translateY(0)}
+.btn-secondary{box-shadow:inset 0 1px 0 #fff,var(--sh-1)}
+.btn-secondary:hover{transform:translateY(-2px)}
+.btn-dark{background:linear-gradient(180deg,#232c3f,#111827);box-shadow:inset 0 1px 0 rgba(255,255,255,.12),0 14px 30px -8px rgba(17,24,39,.5)}
+
+/* Cards: layered, warm-tinted depth with a light top edge */
+.svc,.faq-item,.process-card,.proof-card,.case-card,.plan,.calc,.bl-card,.bl-feat{
+  background-image:linear-gradient(180deg,rgba(255,255,255,.9),rgba(255,255,255,.0) 42%);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.95),var(--sh-1);
+  border-color:rgba(60,35,20,.07);
+  transition:transform .3s cubic-bezier(.2,.8,.2,1),box-shadow .3s ease,border-color .3s ease;
+}
+.svc:hover,.bl-card:hover,.process-card:hover,.case-card:hover,.proof-card:hover{
+  transform:translateY(-6px);box-shadow:inset 0 1px 0 #fff,var(--sh-2);border-color:rgba(255,107,53,.28);
+}
+.plan.hot{box-shadow:inset 0 1px 0 rgba(255,255,255,.9),0 2px 4px rgba(60,35,20,.06),0 26px 60px -14px rgba(255,107,53,.40)}
+.bl-feat{box-shadow:inset 0 1px 0 #fff,0 2px 6px rgba(60,35,20,.06),0 40px 80px -24px rgba(204,71,16,.28)}
+
+/* Hero cards get coloured shadows matching their tint */
+.hc-card.orange{box-shadow:0 24px 50px -14px rgba(255,107,53,.55)}
+.hc-card.peach{box-shadow:0 24px 50px -16px rgba(255,150,100,.45)}
+.hc-card.navy{box-shadow:0 26px 56px -14px rgba(17,24,39,.55)}
+.hc-card.soft,.hc-card.media{box-shadow:var(--sh-1)}
+.hc-badges span{box-shadow:inset 0 1px 0 #fff,0 6px 16px -6px rgba(60,35,20,.18)}
+
+/* Dark sections */
+.dark,.bl-cta-box{
+  background:
+    radial-gradient(700px 360px at 90% 0%,rgba(255,107,53,.28),transparent 60%),
+    radial-gradient(520px 320px at 0% 100%,rgba(245,183,81,.14),transparent 60%),
+    linear-gradient(160deg,#1a2234,#0f1522)!important;
+}
+.bl-cta-box{box-shadow:0 40px 80px -30px rgba(15,21,34,.6)}
+
+/* Header glass */
+header.pillnav .pill-wrap{
+  background:rgba(255,255,255,.78);-webkit-backdrop-filter:saturate(1.6) blur(16px);backdrop-filter:saturate(1.6) blur(16px);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.9),0 1px 2px rgba(60,35,20,.06),0 18px 44px -14px rgba(60,35,20,.22);
+}
+
+@media (prefers-reduced-motion:reduce){.svc:hover,.bl-card:hover,.btn-primary:hover{transform:none}}
