@@ -106,3 +106,16 @@ section:not(.hero):not(.dark):not(.final-cta){padding-top:88px;padding-bottom:88
 
 /* Shorter hero on phones: keep video, steps and channel logos */
 @media(max-width:520px){.hero-cards .c3,.hero-cards .c4,.hero-cards .c5{display:none}.hc-mid{order:0}}
+
+/* Section labels: brand-colour gradient text, a touch larger */
+.eyebrow{background:linear-gradient(90deg,#b4410c,#e8661f 55%,#d98a12);-webkit-background-clip:text;background-clip:text;color:transparent!important;-webkit-text-fill-color:transparent;font-size:.8rem;letter-spacing:.16em}
+.dark .eyebrow,.final-cta .eyebrow,.bl-cta-box .eyebrow{background:linear-gradient(90deg,#ffb27a,#ffd08a);-webkit-background-clip:text;background-clip:text}
+
+/* Soft colour glow behind each section, alternating sides, so the page has depth instead of flat bands */
+section:not(.hero):not(.dark):not(.final-cta){position:relative;isolation:isolate;overflow:hidden}
+section:not(.hero):not(.dark):not(.final-cta)::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:radial-gradient(640px 320px at 50% -4%,rgba(255,138,82,.16),transparent 70%),radial-gradient(520px 360px at 100% 100%,rgba(245,183,81,.12),transparent 70%)}
+section:not(.hero):not(.dark):not(.final-cta):nth-of-type(even)::before{
+  background:radial-gradient(560px 340px at 0% 0%,rgba(245,183,81,.16),transparent 70%),radial-gradient(640px 320px at 80% 108%,rgba(255,107,53,.12),transparent 70%)}
+.section-head h2,.built h2{background:linear-gradient(180deg,#141821 55%,#3a2a24);-webkit-background-clip:text;background-clip:text;color:transparent}
+.built h2 em{background:linear-gradient(90deg,#ff6b35,#f5a23a);-webkit-background-clip:text;background-clip:text}
