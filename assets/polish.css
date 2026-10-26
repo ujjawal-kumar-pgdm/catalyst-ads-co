@@ -144,3 +144,11 @@ h1 em,h2 em{font-style:italic;background:linear-gradient(90deg,#ff6b35,#f5a23a);
 section:not(.hero):not(.dark):not(.final-cta)::before{
   -webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 22%,#000 78%,transparent 100%);
   mask-image:linear-gradient(to bottom,transparent 0,#000 22%,#000 78%,transparent 100%)}
+
+/* Orange glow back at full strength: centres sit inside each section and fade out before the edges, so no seam */
+section:not(.hero):not(.dark):not(.final-cta)::before{
+  background:radial-gradient(760px 300px at 50% 24%,rgba(255,122,64,.26),transparent 72%),radial-gradient(560px 300px at 92% 78%,rgba(245,183,81,.22),transparent 72%);
+  -webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 14%,#000 86%,transparent 100%);
+  mask-image:linear-gradient(to bottom,transparent 0,#000 14%,#000 86%,transparent 100%)}
+section:not(.hero):not(.dark):not(.final-cta):nth-of-type(even)::before{
+  background:radial-gradient(640px 300px at 8% 28%,rgba(245,183,81,.26),transparent 72%),radial-gradient(760px 320px at 58% 80%,rgba(255,107,53,.22),transparent 72%)}
