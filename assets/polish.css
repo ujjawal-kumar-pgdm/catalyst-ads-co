@@ -134,3 +134,8 @@ section:not(.hero):not(.dark):not(.final-cta):nth-of-type(even)::before{
 .mis h3{font-family:'Playfair Display',Georgia,serif;font-size:1.4rem;letter-spacing:-.02em;margin:0 0 8px}
 .mis p{color:var(--muted);margin:0;font-size:.97rem}
 @media(max-width:800px){.mis-grid{grid-template-columns:1fr}}
+
+/* Accent word in every heading */
+h1 em,h2 em{font-style:italic;background:linear-gradient(90deg,#ff6b35,#f5a23a);-webkit-background-clip:text;background-clip:text;color:transparent;display:inline-block;padding:.04em .14em .2em .04em;margin:-.04em -.14em -.2em -.04em}
+.dark h2 em,.final-cta h2 em,.bl-cta-box h2 em,#resources h2 em{background:linear-gradient(90deg,#ff9a66,#ffc974);-webkit-background-clip:text;background-clip:text}
+.bl-sub{font-size:clamp(1.6rem,3vw,2.2rem)}
