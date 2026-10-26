@@ -99,3 +99,7 @@ section:not(.hero):not(.dark):not(.final-cta){padding-top:88px;padding-bottom:88
 .pburger[aria-expanded="true"]::before{transform:rotate(45deg);box-shadow:none}
 .pburger[aria-expanded="true"]::after{opacity:1;transform:rotate(-45deg)}
 .pburger{margin-left:auto;margin-right:-22px}
+
+/* Gradient italic words: give the glyphs room so descenders (y, g) and italic tails are not clipped */
+.built h2 em{display:inline-block;padding:.04em .14em .2em .04em;margin:-.04em -.14em -.2em -.04em;line-height:1.15}
+.built h2{margin-bottom:22px}
