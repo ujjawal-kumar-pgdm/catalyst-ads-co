@@ -139,3 +139,8 @@ section:not(.hero):not(.dark):not(.final-cta):nth-of-type(even)::before{
 h1 em,h2 em{font-style:italic;background:linear-gradient(90deg,#ff6b35,#f5a23a);-webkit-background-clip:text;background-clip:text;color:transparent;display:inline-block;padding:.04em .14em .2em .04em;margin:-.04em -.14em -.2em -.04em}
 .dark h2 em,.final-cta h2 em,.bl-cta-box h2 em,#resources h2 em{background:linear-gradient(90deg,#ff9a66,#ffc974);-webkit-background-clip:text;background-clip:text}
 .bl-sub{font-size:clamp(1.6rem,3vw,2.2rem)}
+
+/* Fade each section glow out at the top and bottom so there is no hard line between sections */
+section:not(.hero):not(.dark):not(.final-cta)::before{
+  -webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 22%,#000 78%,transparent 100%);
+  mask-image:linear-gradient(to bottom,transparent 0,#000 22%,#000 78%,transparent 100%)}
