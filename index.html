@@ -339,7 +339,7 @@
           <ul class="dd-panel">
             <li><a href="/blog.html"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h14v16H5z"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>Blogs</a></li>
             <li><a href="#why"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>How we measure</a></li>
-            <li><a href="#calculator"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h8M8 12h2m4 0h2M8 16h2m4 0h2"/></svg>Cost per lead check</a></li>
+            
             <li><a href="#faq"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.7.4-1 1-1 1.7M12 17v.01"/></svg>FAQ</a></li>
           </ul></li>
         <li><a class="pcta" href="#contact">Book a free audit <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
@@ -495,7 +495,7 @@
       <div class="wrap">
         <div class="section-head">
           <span class="eyebrow">AI search · AEO &amp; GEO</span>
-          <h2>Show up when customers ask <em>ChatGPT, Gemini and Google AI</em></h2>
+          <h2>Show up when customers <em>ask AI</em></h2>
           <p>People now ask AI who to hire. We make sure it finds clear, correct information about you.</p>
         </div>
         <div class="service-grid">
@@ -520,35 +520,7 @@
       </div>
     </div>
 
-        <section class="light" id="calculator">
-      <div class="wrap">
-        <div class="section-head">
-          <span class="eyebrow">Free tool</span>
-          <h2>Check your <em>cost per lead</em></h2>
-          <p>Add your numbers. See what you pay per lead and what you can afford.</p>
-        </div>
-        <div class="calc">
-          <form class="calc-in" id="calcForm" novalidate>
-            <div class="field"><label for="c-spend">Monthly ad spend (&#8377;)</label><input id="c-spend" inputmode="numeric" placeholder="e.g. 30000"></div>
-            <div class="field"><label for="c-leads">Leads you got from it</label><input id="c-leads" inputmode="numeric" placeholder="e.g. 40"></div>
-            <div class="field"><label for="c-value">Value of one new customer (&#8377;)</label><input id="c-value" inputmode="numeric" placeholder="e.g. 8000"></div>
-            <div class="field"><label for="c-close">Out of 10 leads, how many become customers?</label><input id="c-close" inputmode="numeric" placeholder="e.g. 2"></div>
-          </form>
-          <div class="calc-out" role="status" aria-live="polite">
-            <small>You pay per lead</small>
-            <strong id="o-cpl">&#8377;--</strong>
-            <small>You can afford up to</small>
-            <strong class="sm" id="o-max">&#8377;--</strong>
-            <div class="verdict" id="o-verdict">Fill in the four numbers to see your result.</div>
-            <a class="btn btn-primary" id="o-wa" href="https://wa.me/919798948007" target="_blank" rel="noopener">Get this checked free</a>
-          </div>
-        </div>
-        <p class="calc-note">Simple rule of thumb: what you can afford = value of a customer &times; share of leads that become customers. Your real costs may differ.</p>
-      </div>
-    </section>
-
-
-    <section id="process" class="light">
+        <section id="process" class="light">
       <div class="wrap">
         <div class="section-head"><span class="eyebrow">Our process</span><h2>From audit to <em>results</em></h2><p>You always know what happens next.</p></div>
         <div class="process-grid">
@@ -572,24 +544,7 @@
       </div>
     </section>
 
-    <section id="resources" class="light">
-      <div class="wrap">
-        <div class="resource-wrap">
-          <div>
-            <span class="eyebrow">Ebook</span>
-            <h2>Meta Ads for <em>First-Time Founders</em></h2>
-            <p>A simple guide to launching your first campaign.</p>
-            <div class="cta-row">
-              <a href="https://ujjawal7.gumroad.com/l/qdkjxe" class="btn btn-primary" target="_blank" rel="noopener">Get the ebook →</a>
-              <a href="blog.html" class="btn btn-secondary">Read the blog</a>
-            </div>
-          </div>
-          <div class="resource-book" aria-hidden="true"><small>Catalyst Ads Co.</small><strong>Meta Ads for First-Time Founders</strong><small>Ujjawal 'Monk' Kumar</small></div>
-        </div>
-      </div>
-    </section>
-
-        <section class="light" id="faq">
+    <section class="light" id="faq">
       <div class="wrap">
         <div class="section-head"><span class="eyebrow">FAQ</span><h2>Questions founders <em>ask us</em></h2></div>
         <div class="faq-grid">
@@ -747,32 +702,6 @@
 })();
 </script>
   <script>(function(){var h=document.getElementById("siteHeader");if(!h)return;function f(){h.classList.toggle("scrolled",window.scrollY>40)}f();window.addEventListener("scroll",f,{passive:true})})();</script>
-  <script>
-(function(){
-  var f=document.getElementById('calcForm');if(!f)return;
-  var $=function(i){return document.getElementById(i)};
-  function n(id){return parseFloat(($(id).value||'').replace(/[^0-9.]/g,''))}
-  function inr(x){return '\u20B9'+Math.round(x).toLocaleString('en-IN')}
-  function run(){
-    var sp=n('c-spend'),ld=n('c-leads'),va=n('c-value'),cl=n('c-close');
-    var cpl=(sp>0&&ld>0)?sp/ld:NaN;
-    var max=(va>0&&cl>=0&&cl<=10)?va*(cl/10):NaN;
-    $('o-cpl').textContent=isNaN(cpl)?'\u20B9--':inr(cpl);
-    $('o-max').textContent=isNaN(max)?'\u20B9--':inr(max);
-    var v=$('o-verdict');v.className='verdict';
-    var msg='Fill in the four numbers to see your result.';
-    if(!isNaN(cpl)&&!isNaN(max)){
-      if(max<=0){msg='With 0 customers from 10 leads, any lead cost loses money. The offer or follow-up needs fixing first.';v.className='verdict bad'}
-      else if(cpl<=max*0.5){msg='Healthy. You pay well under what a lead is worth, so there may be room to scale.';v.className='verdict good'}
-      else if(cpl<=max){msg='Profitable but tight. Small improvements to the page or follow-up would help.';v.className='verdict mid'}
-      else{msg='You pay more per lead than a lead is worth. This needs fixing before spending more.';v.className='verdict bad'}
-    }else if(!isNaN(cpl)){msg='Add the customer value and how many of 10 leads become customers to see what you can afford.'}
-    v.textContent=msg;
-    var t='Hi Catalyst Ads Co., I used your cost per lead check.'+(isNaN(cpl)?'':'\nMy cost per lead: '+inr(cpl))+(isNaN(max)?'':'\nWhat I can afford: '+inr(max))+'\nPlease review my numbers.';
-    $('o-wa').href='https://wa.me/919798948007?text='+encodeURIComponent(t);
-  }
-  f.addEventListener('input',run);f.addEventListener('submit',function(e){e.preventDefault()});run();
-})();
-</script>
+  
 </body>
 </html>
