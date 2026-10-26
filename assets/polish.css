@@ -103,3 +103,6 @@ section:not(.hero):not(.dark):not(.final-cta){padding-top:88px;padding-bottom:88
 /* Gradient italic words: give the glyphs room so descenders (y, g) and italic tails are not clipped */
 .built h2 em{display:inline-block;padding:.04em .14em .2em .04em;margin:-.04em -.14em -.2em -.04em;line-height:1.15}
 .built h2{margin-bottom:22px}
+
+/* Shorter hero on phones: keep video, steps and channel logos */
+@media(max-width:520px){.hero-cards .c3,.hero-cards .c4,.hero-cards .c5{display:none}.hc-mid{order:0}}
