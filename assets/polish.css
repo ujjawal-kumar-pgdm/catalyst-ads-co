@@ -158,3 +158,8 @@ section:not(.hero):not(.dark):not(.final-cta):nth-of-type(even)::before{
 .contact-form .field{margin-bottom:16px}
 .contact-form .form-grid{gap:16px}
 .contact-form .field label{margin-bottom:6px;display:block}
+
+/* touch targets: at least 44px tall */
+.faq-item summary,.qa summary{min-height:44px;align-items:center}
+.faq-item{padding-top:12px!important;padding-bottom:12px!important}
+.svc-more{padding:12px 0;margin-top:6px}
