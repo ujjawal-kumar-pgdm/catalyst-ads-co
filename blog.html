@@ -648,5 +648,6 @@
   chips.forEach(function(b){b.addEventListener('click',function(){cat=b.dataset.f;chips.forEach(function(x){var on=x===b;x.classList.toggle('on',on);x.setAttribute('aria-pressed',on?'true':'false')});run()})});
 })();
 </script>
+<script>(function(){if(!("IntersectionObserver"in window))return;var io=new IntersectionObserver(function(en){en.forEach(function(x){x.target.classList.toggle("offscreen",!x.isIntersecting)})},{rootMargin:"120px 0px"});[].forEach.call(document.querySelectorAll("main>section,.marquee,section.hero"),function(e){io.observe(e)})})();</script>
 </body>
 </html>

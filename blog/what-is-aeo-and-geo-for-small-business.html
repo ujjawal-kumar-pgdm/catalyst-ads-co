@@ -539,5 +539,6 @@
 })();
 </script>
   <script>(function(){var h=document.getElementById("siteHeader");if(!h)return;function f(){h.classList.toggle("scrolled",window.scrollY>40)}f();window.addEventListener("scroll",f,{passive:true})})();</script>
+<script>(function(){if(!("IntersectionObserver"in window))return;var io=new IntersectionObserver(function(en){en.forEach(function(x){x.target.classList.toggle("offscreen",!x.isIntersecting)})},{rootMargin:"120px 0px"});[].forEach.call(document.querySelectorAll("main>section,.marquee,section.hero"),function(e){io.observe(e)})})();</script>
 </body>
 </html>
