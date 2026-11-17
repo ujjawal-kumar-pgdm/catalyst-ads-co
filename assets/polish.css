@@ -180,3 +180,6 @@ section:not(.hero):not(.dark):not(.final-cta):nth-of-type(even)::before{
 .cvlogo{position:absolute;left:16px;bottom:16px;display:flex;align-items:center;gap:9px;background:rgba(255,250,240,.95);padding:6px 16px 6px 7px;border-radius:999px;font:700 .9rem/1 'Playfair Display',Georgia,serif;color:#0d0c0a;box-shadow:0 4px 16px rgba(0,0,0,.2)}
 .cvlogo img{width:28px;height:28px;border-radius:8px;display:block}
 @media(max-width:560px){.cvlogo{left:10px;bottom:10px;font-size:.78rem;padding:5px 12px 5px 6px}.cvlogo img{width:24px;height:24px}}
+
+/* long article bodies must never wait on a scroll-reveal threshold */
+.art .prose.rv,.art .prose.rv.in,.art .prose{opacity:1!important;transform:none!important;filter:none!important}
