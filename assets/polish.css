@@ -170,7 +170,9 @@ section:not(.hero):not(.dark):not(.final-cta):nth-of-type(even)::before{
 /* Scroll smoothness */
 .offscreen *{animation-play-state:paused!important}
 @media (max-width:820px){
-  header.nav,header.pillnav .pill-wrap,.fchip{-webkit-backdrop-filter:none!important;backdrop-filter:none!important;background:rgba(255,255,255,.96)!important}
+  header.nav,header.pillnav .pill-wrap,.fchip{-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
+  header.nav,header.pillnav .pill-wrap,.fchip:not(.on){background:rgba(255,255,255,.96)!important}
+  .fchip.on{background:#141821!important;color:#fff!important}
 }
 
 /* cover image with Catalyst logo badge */
